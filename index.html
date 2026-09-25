@@ -17,20 +17,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>مركز نبض الطهر للحجامة</title>
+    <title>أسبوع السنة النبوية | مركز نبض الطهر للحجامة</title>
 
     <meta name="description"
-        content="مركز نبض الطهر للحجامة في الرياض - حي اشبليا. نقدم خدمات الحجامة والعناية الصحية بعناية واهتمام. احجز موعدك الآن.">
+        content="عروض أسبوع السنة النبوية في مركز نبض الطهر للحجامة بالرياض - حي اشبيليا. احجز موعدك الآن بأسعار خاصة وعناية فائقة.">
 
     <meta name="keywords"
-        content="حجامة في الرياض, حجامة اشبليا, مركز حجامة الرياض, الحجامة الرطبة, الحجامة الجافة, مركز نبض الطهر">
+        content="أسبوع السنة النبوية, حجامة في الرياض, حجامة اشبليا, مركز حجامة الرياض, الحجامة الرطبة, الحجامة الجافة, مركز نبض الطهر">
 
     <meta name="robots" content="index, follow">
 
     <meta name="author" content="مركز نبض الطهر للحجامة">
 
-    <meta property="og:title" content="مركز نبض الطهر للحجامة">
-    <meta property="og:description" content="مركز نبض الطهر للحجامة في الرياض - حي اشبليا">
+    <meta property="og:title" content="أسبوع السنة النبوية - مركز نبض الطهر للحجامة">
+    <meta property="og:description" content="عروض أسبوع السنة النبوية في الرياض - حي اشبيليا">
     <meta property="og:type" content="website">
     <meta property="og:image" content="general-profile-picture.png">
 
@@ -101,11 +101,9 @@
 
         .hero-pattern {
             background-color: #F97316;
-
             background-image:
                 radial-gradient(#FB923C 0.5px, transparent 0.5px),
                 radial-gradient(#FB923C 0.5px, #F97316 0.5px);
-
             background-size: 20px 20px;
             background-position: 0 0, 10px 10px;
         }
@@ -118,7 +116,7 @@
         }
 
         /* ================================
-           GOOGLE MAPS
+            GOOGLE MAPS
         ================================= */
 
         .map-wrapper {
@@ -126,155 +124,88 @@
             width: 100%;
             min-height: 400px;
             height: 100%;
-
             border-radius: 24px;
             overflow: hidden;
-
             border: 4px solid rgba(255, 255, 255, 0.10);
-
-            box-shadow:
-                0 25px 50px -12px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
         }
 
         .map-wrapper iframe {
             position: absolute;
             inset: 0;
-
             width: 100%;
             height: 100%;
-
             min-height: 400px;
-
             border: 0;
         }
 
-        /* Custom Map Information Card */
         .map-info-card {
             position: absolute;
-
             top: 18px;
             left: 18px;
-
             width: min(340px, calc(100% - 36px));
-
             background: rgba(255, 255, 255, 0.98);
-
             color: #1f2937;
-
             border-radius: 18px;
-
             padding: 18px;
-
-            box-shadow:
-                0 15px 35px rgba(0, 0, 0, 0.20);
-
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.20);
             z-index: 20;
-
             border: 1px solid rgba(0, 0, 0, 0.08);
-
             backdrop-filter: blur(8px);
         }
 
         .map-info-card h3 {
             margin: 0 0 8px;
-
             font-size: 17px;
-
             font-weight: 800;
-
             color: #ea580c;
-
             line-height: 1.5;
         }
 
         .map-info-card p {
             margin: 0;
-
             font-size: 13px;
-
             line-height: 1.8;
-
             color: #4b5563;
         }
 
         .map-direction-button {
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             gap: 8px;
-
             width: 100%;
-
             margin-top: 14px;
-
             padding: 11px 14px;
-
             background: #fb923c;
-
             color: white;
-
             border-radius: 12px;
-
             font-size: 14px;
-
             font-weight: 800;
-
             text-decoration: none;
-
             box-shadow: 0 8px 20px rgba(249, 115, 22, 0.25);
-
-            transition:
-                transform 0.2s ease,
-                background-color 0.2s ease,
-                box-shadow 0.2s ease;
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
         }
 
         .map-direction-button:hover {
             background: #ea580c;
-
             transform: translateY(-2px);
-
-            box-shadow:
-                0 12px 25px rgba(249, 115, 22, 0.35);
+            box-shadow: 0 12px 25px rgba(249, 115, 22, 0.35);
         }
 
-        /* Mobile */
         @media (max-width: 640px) {
-
             .map-wrapper {
                 min-height: 430px;
             }
-
             .map-wrapper iframe {
                 min-height: 430px;
             }
-
             .map-info-card {
                 top: 12px;
                 left: 12px;
-
                 width: calc(100% - 24px);
-
                 padding: 15px;
-
                 border-radius: 16px;
-            }
-
-            .map-info-card h3 {
-                font-size: 15px;
-            }
-
-            .map-info-card p {
-                font-size: 12px;
-            }
-
-            .map-direction-button {
-                padding: 10px 12px;
-
-                font-size: 13px;
             }
         }
 
@@ -287,10 +218,9 @@
 
     <!-- ================================
          NAVIGATION
-    ================================= -->
+    ================================ -->
 
-    <nav
-        class="bg-white dark:bg-gray-900 shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+    <nav class="bg-white dark:bg-gray-900 shadow-md fixed w-full z-50 top-0 transition-all duration-300">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -305,12 +235,8 @@
                         class="h-14 w-14 object-cover rounded-full border-2 border-brand-cream dark:border-gray-700 shadow-sm"
                         onerror="this.src='https://via.placeholder.com/150'">
 
-                    <span
-                        class="font-bold text-2xl text-brand-dark dark:text-white tracking-tight"
-                        data-i18n="logo">
-
+                    <span class="font-bold text-2xl text-brand-dark dark:text-white tracking-tight" data-i18n="logo">
                         م. نبض الطهر
-
                     </span>
 
                 </div>
@@ -319,40 +245,20 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center gap-8">
 
-                    <a
-                        href="#about"
-                        class="text-gray-600 dark:text-gray-300 hover:text-brand-primary font-semibold"
-                        data-i18n="nav_about">
-
-                        من نحن
-
+                    <a href="#packages" class="text-gray-600 dark:text-gray-300 hover:text-brand-primary font-semibold" data-i18n="nav_packages">
+                        الباقات والعروض
                     </a>
 
-                    <a
-                        href="#services"
-                        class="text-gray-600 dark:text-gray-300 hover:text-brand-primary font-semibold"
-                        data-i18n="nav_services">
-
+                    <a href="#services" class="text-gray-600 dark:text-gray-300 hover:text-brand-primary font-semibold" data-i18n="nav_services">
                         الخدمات
-
                     </a>
 
-                    <a
-                        href="#faq"
-                        class="text-gray-600 dark:text-gray-300 hover:text-brand-primary font-semibold"
-                        data-i18n="nav_faq">
-
-                        الأسئلة الشائعة
-
+                    <a href="#features" class="text-gray-600 dark:text-gray-300 hover:text-brand-primary font-semibold" data-i18n="nav_features">
+                        لماذا نبض الطهر؟
                     </a>
 
-                    <a
-                        href="#contact"
-                        class="text-gray-600 dark:text-gray-300 hover:text-brand-primary font-semibold"
-                        data-i18n="nav_contact">
-
+                    <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-brand-primary font-semibold" data-i18n="nav_contact">
                         اتصل بنا
-
                     </a>
 
                 </div>
@@ -368,37 +274,12 @@
                         onclick="toggleTheme()"
                         aria-label="تغيير الوضع">
 
-                        <svg
-                            id="sunIcon"
-                            class="w-5 h-5 hidden"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24">
-
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
-                            </path>
-
+                        <svg id="sunIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                         </svg>
 
-
-                        <svg
-                            id="moonIcon"
-                            class="w-5 h-5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24">
-
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
-                            </path>
-
+                        <svg id="moonIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                         </svg>
 
                     </button>
@@ -409,22 +290,16 @@
                         id="langToggleBtn"
                         class="p-2 font-bold text-gray-700 dark:text-gray-200 hover:text-brand-primary"
                         onclick="toggleLanguage()">
-
                         EN
-
                     </button>
 
 
                     <!-- Booking -->
                     <a
-                        href="https://wa.me/966539353569"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="#booking"
                         class="hidden sm:inline-flex bg-brand-primary hover:bg-brand-hover text-white px-6 py-2 rounded-full font-bold shadow-lg"
                         data-i18n="nav_book">
-
                         احجز الآن
-
                     </a>
 
                 </div>
@@ -438,801 +313,347 @@
 
 
     <!-- ================================
-         HERO
-    ================================= -->
+         HERO & LARGE COUNTDOWN SECTION
+    ================================ -->
 
-    <header
-        class="hero-pattern pt-32 pb-20 lg:pt-48 lg:pb-32 relative text-white overflow-hidden">
-
+    <header class="hero-pattern pt-32 pb-20 lg:pt-44 lg:pb-32 relative text-white overflow-hidden">
         <div class="absolute inset-0 bg-black opacity-40"></div>
 
 
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-up">
 
-            <span
-                class="text-brand-cream font-bold text-lg mb-4 block"
-                data-i18n="hero_welcome">
-
-                مرحباً بكم في
-
+            <span class="text-brand-cream font-bold text-lg mb-2 block" data-i18n="hero_welcome">
+                مرحباً بكم في أسبوع السنة النبوية
             </span>
 
 
-            <h1
-                class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6"
-                data-i18n="hero_title">
-
-                مركز نبض الطهر للحجامة
-
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6" data-i18n="hero_title">
+                مركز نبض الطهر للحجامة بالرياض - حي اشبليا
             </h1>
 
 
-            <p
-                class="text-lg md:text-xl max-w-3xl mx-auto text-gray-200 leading-relaxed mb-10"
-                data-i18n="hero_desc">
-
-                في مركز نبض الطهر للحجامة، نقدم خدمات الحجامة النبوية والطبية بعناية واهتمام، مع الحرص على توفير تجربة مريحة وآمنة لعملائنا.
-
+            <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-200 leading-relaxed mb-8" data-i18n="hero_desc">
+                عروض خاصة واستثنائية لإحياء السنة النبوية في الوقاية والعلاج بأسعار مميزة وعناية طبية فائقة.
             </p>
 
 
-            <div
-                class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-10">
-
-                <!-- WhatsApp -->
-                <a
-                    href="https://wa.me/966539353569"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="w-full sm:w-auto bg-brand-primary hover:bg-brand-hover text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg flex items-center justify-center gap-3">
-
-                    <span>💬</span>
-
-                    <span data-i18n="book_now">
-                        احجز الآن
-                    </span>
-
-                </a>
+            <!-- BIG COUNTDOWN BANNER IN HOMEPAGE -->
+            <div class="bg-gray-950/80 backdrop-blur-md border-2 border-brand-primary/50 max-w-4xl mx-auto rounded-3xl p-6 md:p-8 shadow-2xl mb-12">
+                <p class="text-brand-primary font-bold text-base md:text-lg mb-3" data-i18n="countdown_title">
+                    ⏳ عجل بالأجر والشفاء - متبقي على إغلاق حجز أسبوع السنة النبوية:
+                </p>
+                <div id="countdownTimer" class="text-2xl md:text-4xl font-extrabold tracking-wider font-mono text-yellow-400">
+                    00 يوم : 00 ساعة : 00 دقيقة : 00 ثانية
+                </div>
+            </div>
 
 
-                <!-- Call -->
-                <a
-                    href="tel:+966510633737"
-                    class="w-full sm:w-auto bg-brand-cream text-brand-dark hover:bg-white px-8 py-4 rounded-full font-bold text-lg shadow-lg flex items-center justify-center gap-3">
+            <!-- Offer Packages Side-by-Side -->
+            <div id="packages" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-start mt-8">
 
-                    <span>📞</span>
+                <!-- Package 1: Royal Deal -->
+                <div class="bg-white dark:bg-brand-darkCard text-gray-900 dark:text-white rounded-3xl p-8 border-4 border-brand-primary shadow-2xl relative transform hover:-translate-y-1 transition-all">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-primary text-white px-4 py-1 rounded-full text-xs font-extrabold shadow">
+                        ⭐ الباقة الملكية الأبرز (باقة السنة)
+                    </div>
+                    <h3 class="text-2xl font-extrabold mb-3 mt-2" data-i18n="pkg1_title">
+                        الباقة الملكية الشاملة
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-6" data-i18n="pkg1_desc">
+                        12 كأس حجامة شاملة للنقاط النبوية والظهر والكتفين لتنقية الدم واستعادة النشاط الكامل.
+                    </p>
+                    <div class="flex items-baseline gap-3 mb-6">
+                        <span class="text-4xl font-extrabold text-red-600">190 ريال</span>
+                        <span class="text-lg text-gray-400 line-through">250 ريال</span>
+                    </div>
+                    <a href="#booking" onclick="selectPackage('الباقة الملكية الشاملة - 12 كأس (190 ريال)')" class="block text-center bg-brand-primary hover:bg-brand-hover text-white py-3.5 rounded-2xl font-bold shadow-lg transition-all">
+                        احجز الباقة الملكية الآن
+                    </a>
+                </div>
 
-                    <span data-i18n="call_now">
-                        اتصل بنا الآن
-                    </span>
-
-                </a>
+                <!-- Package 2: Light Deal -->
+                <div class="bg-white dark:bg-brand-darkCard text-gray-900 dark:text-white rounded-3xl p-8 border-2 border-brand-primary/30 shadow-xl relative transform hover:-translate-y-1 transition-all">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-dark text-white px-4 py-1 rounded-full text-xs font-bold shadow">
+                        ⚡ الباقة الخفيفة للنشاط
+                    </div>
+                    <h3 class="text-2xl font-extrabold mb-3 mt-2" data-i18n="pkg2_title">
+                        الباقة الخفيفة للنشاط
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-6" data-i18n="pkg2_desc">
+                        6 كؤوس حجامة مركزة لتخفيف الإجهاد السريع وتنشيط الدورة الدموية.
+                    </p>
+                    <div class="flex items-baseline gap-3 mb-6">
+                        <span class="text-4xl font-extrabold text-red-600">129 ريال</span>
+                        <span class="text-lg text-gray-400 line-through">150 ريال</span>
+                    </div>
+                    <a href="#booking" onclick="selectPackage('الباقة الخفيفة للنشاط - 6 كؤوس (129 ريال)')" class="block text-center bg-brand-dark hover:bg-brand-hover text-white py-3.5 rounded-2xl font-bold shadow-lg transition-all">
+                        احجز الباقة الخفيفة الآن
+                    </a>
+                </div>
 
             </div>
 
         </div>
-
     </header>
 
 
 
     <!-- ================================
          ABOUT
-    ================================= -->
+    ================================ -->
 
-    <section
-        id="about"
-        class="py-20 bg-white dark:bg-brand-darkBg">
-
+    <section id="about" class="py-20 bg-white dark:bg-brand-darkBg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div
-                class="flex flex-col md:flex-row items-center gap-12 fade-up">
+            <div class="flex flex-col md:flex-row items-center gap-12 fade-up">
 
                 <div class="md:w-1/2 relative">
-
-                    <div
-                        class="absolute inset-0 bg-brand-primary rounded-3xl transform translate-x-4 translate-y-4 rtl:-translate-x-4 opacity-10">
-                    </div>
-
-
-                    <div
-                        class="bg-brand-cream dark:bg-brand-darkCard p-10 rounded-3xl relative z-10 border border-brand-primary/10 shadow-sm">
-
-                        <svg
-                            class="w-16 h-16 text-brand-dark dark:text-brand-primary mb-6"
-                            fill="currentColor"
-                            viewBox="0 0 24 24">
-
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-
+                    <div class="absolute inset-0 bg-brand-primary rounded-3xl transform translate-x-4 translate-y-4 rtl:-translate-x-4 opacity-10"></div>
+                    <div class="bg-brand-cream dark:bg-brand-darkCard p-10 rounded-3xl relative z-10 border border-brand-primary/10 shadow-sm">
+                        <svg class="w-16 h-16 text-brand-dark dark:text-brand-primary mb-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
                         </svg>
-
-
-                        <h3
-                            class="text-2xl font-bold text-brand-dark dark:text-white mb-4"
-                            data-i18n="about_mission_title">
-
+                        <h3 class="text-2xl font-bold text-brand-dark dark:text-white mb-4" data-i18n="about_mission_title">
                             رسالتنا وقيمنا
-
                         </h3>
-
-
-                        <p
-                            class="text-gray-700 dark:text-gray-300 leading-relaxed font-medium"
-                            data-i18n="about_mission_desc">
-
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed font-medium" data-i18n="about_mission_desc">
                             نحن ملتزمون بتقديم خدمات علاجية طبيعية وفعالة تهدف إلى تحسين صحتكم العامة واستعادة توازن الجسم.
-
                         </p>
-
                     </div>
-
                 </div>
-
 
                 <div class="md:w-1/2 text-start">
-
-                    <div
-                        class="inline-block px-4 py-1 rounded-full bg-brand-cream dark:bg-brand-darkCard text-brand-dark dark:text-brand-primary font-semibold mb-4 text-sm border border-brand-primary/20"
-                        data-i18n="about_badge">
-
+                    <div class="inline-block px-4 py-1 rounded-full bg-brand-cream dark:bg-brand-darkCard text-brand-dark dark:text-brand-primary font-semibold mb-4 text-sm border border-brand-primary/20" data-i18n="about_badge">
                         من نحن
-
                     </div>
-
-
-                    <h2
-                        class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6"
-                        data-i18n="about_title">
-
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6" data-i18n="about_title">
                         أفضل خدمات الحجامة والعلاج بالطب البديل
-
                     </h2>
-
-
-                    <p
-                        class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
-                        data-i18n="about_desc">
-
-                        في مركز نبض الطهر للحجامة، نقدم خدمات الحجامة النبوية والطبية بعناية واهتمام، ونسعى لتقديم جلسات مريحة ومهنية تلبي احتياجاتكم.
-
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed" data-i18n="about_desc">
+                        في مركز نبض الطهر للحجامة بالرياض، نقدم خدمات الحجامة النبوية والطبية بعناية فائقة، مع ضمان الخصوصية الكاملة وتعقيم دقيق للأدوات.
                     </p>
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
 
 
 
     <!-- ================================
-         SERVICES
-    ================================= -->
+         SERVICES (Tailored for Saudi Client Needs)
+    ================================ -->
 
-    <section
-        id="services"
-        class="py-20 bg-brand-cream/50 dark:bg-[#120708]">
-
+    <section id="services" class="py-20 bg-brand-cream/50 dark:bg-[#120708]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
+            <div class="fade-up mb-16">
+                <div class="inline-block px-4 py-1 rounded-full bg-white dark:bg-brand-darkCard text-brand-dark dark:text-brand-primary font-semibold mb-4 text-sm border border-brand-primary/20" data-i18n="services_badge">
+                    خدماتنا المتخصصة
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white" data-i18n="services_title">
+                    جلسات مصممة لحل آلامك وضغط حياتك اليومية
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-start mb-16">
+
+                <!-- Service 1 -->
+                <div class="bg-white dark:bg-brand-darkCard rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="srv1_title">
+                        الحجامة الوقائية النبوية
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="srv1_desc">
+                        تستهدف النقاط النبوية المعتمدة لتنقية الدم، التخلص من الخمول والسموم المتراكمة، وإعادة الحيوية اليومية.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white dark:bg-brand-darkCard rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">🩺</div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="srv2_title">
+                        الحجامة العلاجية المتخصصة
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="srv2_desc">
+                        حل فوري لآلام الظهر المزمنة، تشنجات عضلة الأبهر الناتجة عن الجلوس الطويل المكتبي، والصداع النصفي.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white dark:bg-brand-darkCard rounded-3xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+                    <div class="text-4xl mb-4">💪</div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="srv3_title">
+                        حجامة الرياضيين واللياقة
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed" data-i18n="srv3_desc">
+                        مخصصة للرياضيين ورواد النادي لتفكيك العقد العضلية، زيادة تدفق الأكسجين، وتسريع التعافي بعد التمارين.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ================================
+         TRUST & SAFETY FEATURES
+    ================================ -->
+
+    <section id="features" class="py-20 bg-white dark:bg-brand-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
             <div class="fade-up mb-16">
-
-                <div
-                    class="inline-block px-4 py-1 rounded-full bg-white dark:bg-brand-darkCard text-brand-dark dark:text-brand-primary font-semibold mb-4 text-sm border border-brand-primary/20"
-                    data-i18n="services_badge">
-
-                    خدماتنا
-
+                <div class="inline-block px-4 py-1 rounded-full bg-brand-cream dark:bg-brand-darkCard text-brand-dark dark:text-brand-primary font-semibold mb-4 text-sm border border-brand-primary/20">
+                    الأمان والخصوصية أولاً
                 </div>
-
-
-                <h2
-                    class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white"
-                    data-i18n="services_title">
-
-                    الخدمات العلاجية
-
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                    لماذا يثق بنا عملاؤنا في الرياض؟
                 </h2>
-
             </div>
 
-
-
-            <!-- Cupping -->
-            <div class="mb-20 fade-up">
-
-                <h3
-                    class="text-2xl md:text-3xl font-bold text-brand-dark dark:text-brand-primary mb-10 flex items-center justify-center gap-3 border-b-2 border-brand-dark/20 pb-4 inline-flex px-8">
-
-                    <span>🩺</span>
-
-                    <span data-i18n="service_cupping">
-                        أنواع الحجامة
-                    </span>
-
-                </h3>
-
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-start">
-
-
-                    <!-- Wet -->
-                    <div
-                        class="bg-white dark:bg-brand-darkCard rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-
-                        <img
-                            src="WhatsApp Image 2026-02-28 at 2.01.33 PM.jpeg"
-                            alt="الحجامة الرطبة في مركز نبض الطهر"
-                            class="w-full h-48 object-cover">
-
-                        <div class="p-6">
-
-                            <h4
-                                class="text-xl font-bold text-gray-900 dark:text-white mb-3"
-                                data-i18n="cup_wet_title">
-
-                                الحجامة الرطبة
-
-                            </h4>
-
-
-                            <p
-                                class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
-                                data-i18n="cup_wet_desc">
-
-                                جلسة حجامة رطبة يتم تقديمها وفق الإجراءات المعتمدة في المركز.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Dry -->
-                    <div
-                        class="bg-white dark:bg-brand-darkCard rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-
-                        <img
-                            src="https://www.optimalcentre.co.uk/wp-content/uploads/2022/11/optimal-centre-treatment-cupping.jpg"
-                            alt="الحجامة الجافة"
-                            class="w-full h-48 object-cover">
-
-                        <div class="p-6">
-
-                            <h4
-                                class="text-xl font-bold text-gray-900 dark:text-white mb-3"
-                                data-i18n="cup_dry_title">
-
-                                الحجامة الجافة
-
-                            </h4>
-
-
-                            <p
-                                class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
-                                data-i18n="cup_dry_desc">
-
-                                تستخدم الحجامة الجافة ضمن جلسات العناية والاسترخاء حسب تقييم الحالة.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Sliding -->
-                    <div
-                        class="bg-white dark:bg-brand-darkCard rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-
-                        <img
-                            src="https://medhathegazi.com/wp-content/uploads/2024/01/Sliding-Cupping-Hijama-in-Abu-Dhabi.png"
-                            alt="الحجامة المتزحلقة"
-                            class="w-full h-48 object-cover">
-
-                        <div class="p-6">
-
-                            <h4
-                                class="text-xl font-bold text-gray-900 dark:text-white mb-3"
-                                data-i18n="cup_massage_title">
-
-                                الحجامة المتزحلقة
-
-                            </h4>
-
-
-                            <p
-                                class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
-                                data-i18n="cup_massage_desc">
-
-                                جلسات الحجامة المتزحلقة حسب الخدمات المتوفرة في المركز.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-start">
+                <div class="bg-brand-cream/50 dark:bg-brand-darkCard rounded-3xl p-8 shadow-md border border-brand-primary/10">
+                    <div class="text-3xl mb-4">🔒</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">خصوصية تامة 100%</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        أقسام وطاقم إداري وطبي مفصول تماماً (ممارسون رجالي للرجال / ممارسات نساء للنساء).
+                    </p>
                 </div>
 
-            </div>
-
-
-
-            <!-- Alternative Medicine -->
-            <div class="fade-up">
-
-                <h3
-                    class="text-2xl md:text-3xl font-bold text-brand-dark dark:text-brand-primary mb-10 flex items-center justify-center gap-3 border-b-2 border-brand-dark/20 pb-4 inline-flex px-8">
-
-                    <span>🌿</span>
-
-                    <span data-i18n="service_altmed">
-                        أنواع الطب البديل
-                    </span>
-
-                </h3>
-
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-start">
-
-
-                    <!-- Acupuncture -->
-                    <div
-                        class="bg-white dark:bg-brand-darkCard rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600"
-                            alt="الإبر الصينية"
-                            class="w-full h-48 object-cover">
-
-                        <div class="p-6">
-
-                            <h4
-                                class="text-xl font-bold text-gray-900 dark:text-white mb-3"
-                                data-i18n="alt_acu_title">
-
-                                الإبر الصينية
-
-                            </h4>
-
-
-                            <p
-                                class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
-                                data-i18n="alt_acu_desc">
-
-                                جلسات الإبر الصينية حسب الخدمات المتاحة بالمركز.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Herbal -->
-                    <div
-                        class="bg-white dark:bg-brand-darkCard rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-
-                        <img
-                            src="https://cdn.altibbi.com/cdn/cache/1000x500/image/2022/05/20/a202288e160a3c4c22ee8c006c5186bb.webp"
-                            alt="العلاج بالأعشاب"
-                            class="w-full h-48 object-cover">
-
-                        <div class="p-6">
-
-                            <h4
-                                class="text-xl font-bold text-gray-900 dark:text-white mb-3"
-                                data-i18n="alt_herb_title">
-
-                                العلاج بالأعشاب
-
-                            </h4>
-
-
-                            <p
-                                class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
-                                data-i18n="alt_herb_desc">
-
-                                خدمات العلاج بالأعشاب حسب ما يقدمه المركز.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Massage -->
-                    <div
-                        class="bg-white dark:bg-brand-darkCard rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&q=80&w=600"
-                            alt="التدليك العلاجي"
-                            class="w-full h-48 object-cover">
-
-                        <div class="p-6">
-
-                            <h4
-                                class="text-xl font-bold text-gray-900 dark:text-white mb-3"
-                                data-i18n="alt_massage_title">
-
-                                التدليك العلاجي
-
-                            </h4>
-
-
-                            <p
-                                class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
-                                data-i18n="alt_massage_desc">
-
-                                جلسات تدليك علاجية حسب الخدمات المتاحة بالمركز.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
+                <div class="bg-brand-cream/50 dark:bg-brand-darkCard rounded-3xl p-8 shadow-md border border-brand-primary/10">
+                    <div class="text-3xl mb-4">✨</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">تعقيم فائق وأدوات أحادية</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        مشارط وأدوات طبية معقمة ذاتية الاستخدام تُفتح وتُغلق أمام العميل مباشرة لضمان أعلى معايير السلامة.
+                    </p>
                 </div>
 
+                <div class="bg-brand-cream/50 dark:bg-brand-darkCard rounded-3xl p-8 shadow-md border border-brand-primary/10">
+                    <div class="text-3xl mb-4">🏥</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">فرع الرياض - حي اشبيليا</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                        جلسات حضورية داخل مركزنا المرخص بالرياض مطابقة لمعايير وزارة الصحة السعودية بدقة متناهية.
+                    </p>
+                </div>
             </div>
 
         </div>
-
     </section>
 
 
 
     <!-- ================================
-         FAQ
-    ================================= -->
+         INSTANT WHATSAPP LEAD FORM (CTA)
+    ================================ -->
 
-    <section
-        id="faq"
-        class="py-20 bg-white dark:bg-brand-darkBg">
+    <section id="booking" class="py-20 bg-brand-cream/50 dark:bg-[#120708]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div
-            class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
-
-            <div
-                class="inline-block px-4 py-1 rounded-full bg-brand-cream dark:bg-brand-darkCard text-brand-dark dark:text-brand-primary font-semibold mb-4 text-sm border border-brand-primary/20"
-                data-i18n="faq_badge">
-
-                معلومات تهمك
-
-            </div>
-
-
-            <h2
-                class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8"
-                data-i18n="faq_title">
-
-                الأسئلة الشائعة
-
-            </h2>
-
-
-            <div
-                class="bg-brand-cream/50 dark:bg-brand-darkCard rounded-3xl p-8 md:p-12 border border-brand-primary/10 shadow-sm">
-
-                <div class="text-5xl mb-6">
-                    ❓
+            <div class="bg-white dark:bg-brand-darkCard rounded-3xl p-8 md:p-12 border-2 border-brand-primary/40 shadow-2xl fade-up">
+                <div class="text-center mb-8">
+                    <span class="bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full">احجز جلستك في ثوانٍ</span>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mt-3" data-i18n="form_title">
+                        نموذج الحجز الفوري لأسبوع السنة النبوية
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mt-2" data-i18n="form_desc">
+                        املأ بياناتك أدناه وسيتم تحويلك فوراً لتأكيد الموعد عبر الواتساب مع خدمة العملاء.
+                    </p>
                 </div>
 
+                <form id="whatsappLeadForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-2">الاسم الكريم:</label>
+                        <input type="text" id="clientName" required placeholder="مثال: عبد الله القحطاني" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                    </div>
 
-                <p
-                    class="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-medium"
-                    data-i18n="faq_desc">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-2">رقم الجوال (سعودي):</label>
+                        <input type="tel" id="clientPhone" required placeholder="05xxxxxxxx أو 056 430 0929" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-primary" dir="ltr" style="text-align: right;">
+                    </div>
 
-                    مرحبًا بك في صفحة الأسئلة الشائعة لمركز نبض الطهر للحجامة! إذا كانت لديك أي أسئلة إضافية حول خدمات الحجامة، يرجى التواصل معنا.
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-2">القسم المطلوب:</label>
+                        <select id="clientDept" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                            <option value="قسم الرجال">قسم الرجال (ممارسون رجالي)</option>
+                            <option value="قسم النساء">قسم النساء (ممارسات نساء)</option>
+                        </select>
+                    </div>
 
-                </p>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 dark:text-gray-200 mb-2">اختر الباقة:</label>
+                        <select id="clientPackage" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                            <option value="الباقة الملكية الشاملة - 12 كأس (190 ريال)">الباقة الملكية الشاملة - 12 كأس (190 ريال)</option>
+                            <option value="الباقة الخفيفة للنشاط - 6 كؤوس (129 ريال)">الباقة الخفيفة للنشاط - 6 كؤوس (129 ريال)</option>
+                            <option value="حجامة علاجية مخصصة">حجامة علاجية مخصصة حسب الحالة</option>
+                        </select>
+                    </div>
 
+                    <button type="submit" class="w-full bg-brand-primary hover:bg-brand-hover text-white py-4 rounded-xl font-extrabold text-lg shadow-xl flex items-center justify-center gap-2 transition-all">
+                        <span>💬</span>
+                        <span>تأكيد الحجز عبر الواتساب</span>
+                    </button>
+                </form>
             </div>
 
         </div>
-
     </section>
 
 
 
     <!-- ================================
-         CONTACT
-    ================================= -->
+         CONTACT & MAP
+    ================================ -->
 
-    <section
-        id="contact"
-        class="py-20 bg-brand-dark dark:bg-[#1F130A] text-white relative overflow-hidden">
-
+    <section id="contact" class="py-20 bg-brand-dark dark:bg-[#1F130A] text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-black opacity-20"></div>
 
-
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
-            <div
-                class="grid grid-cols-1 lg:grid-cols-2 gap-16 text-start">
-
-
-                <!-- ============================
-                     CONTACT INFO
-                ============================= -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 text-start">
 
                 <div class="fade-up">
-
-                    <h2
-                        class="text-3xl md:text-4xl font-bold mb-4 text-white"
-                        data-i18n="contact_title">
-
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white" data-i18n="contact_title">
                         تواصل معنا
-
                     </h2>
-
-
-                    <p
-                        class="text-brand-cream opacity-90 mb-10 text-lg"
-                        data-i18n="contact_desc">
-
-                        نحن هنا لخدمتك والإجابة على استفساراتك.
-
+                    <p class="text-brand-cream opacity-90 mb-10 text-lg" data-i18n="contact_desc">
+                        نحن هنا لخدمتك والإجابة على استفساراتك حول أسبوع السنة النبوية.
                     </p>
 
-
-
                     <div class="space-y-8">
-
-
-                        <!-- Address -->
                         <div class="flex items-start gap-4">
-
-                            <div
-                                class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-
-                                <svg
-                                    class="w-6 h-6 text-brand-primary"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24">
-
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                    </path>
-
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
-                                    </path>
-
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 </svg>
-
                             </div>
-
-
                             <div>
-
-                                <h4
-                                    class="text-lg font-bold text-brand-primary mb-1"
-                                    data-i18n="contact_address">
-
-                                    العنوان
-
-                                </h4>
-
-
-                                <p
-                                    class="text-gray-200 leading-relaxed"
-                                    data-i18n="contact_address_val">
-
-                                    الرياض حي اشبليا - شارع الشيخ حسن بن حسين بن علي بجوار مطعم ادار
-
+                                <h4 class="text-lg font-bold text-brand-primary mb-1">العنوان</h4>
+                                <p class="text-gray-200 leading-relaxed">
+                                    الرياض حي اشبيليا - شارع الشيخ حسن بن حسين بن علي بجوار مطعم ادار
                                 </p>
-
                             </div>
-
                         </div>
 
-
-
-                        <!-- Phone -->
                         <div class="flex items-start gap-4">
-
-                            <div
-                                class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-
-                                <svg
-                                    class="w-6 h-6 text-brand-primary"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24">
-
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                                    </path>
-
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                                 </svg>
-
                             </div>
-
-
                             <div>
-
-                                <h4
-                                    class="text-lg font-bold text-brand-primary mb-1"
-                                    data-i18n="contact_phone">
-
-                                    رقم الهاتف
-
-                                </h4>
-
-
-                                <a
-                                    href="tel:+966510633737"
-                                    class="text-gray-200 hover:text-white transition-colors block text-xl"
-                                    dir="ltr">
-
+                                <h4 class="text-lg font-bold text-brand-primary mb-1">رقم الهاتف</h4>
+                                <a href="tel:+966510633737" class="text-gray-200 hover:text-white transition-colors block text-xl" dir="ltr">
                                     +966 510633737
-
                                 </a>
-
                             </div>
-
                         </div>
-
-
-
-                        <!-- Email -->
-                        <div class="flex items-start gap-4">
-
-                            <div
-                                class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-
-                                <svg
-                                    class="w-6 h-6 text-brand-primary"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24">
-
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                    </path>
-
-                                </svg>
-
-                            </div>
-
-
-                            <div>
-
-                                <h4
-                                    class="text-lg font-bold text-brand-primary mb-1"
-                                    data-i18n="contact_email">
-
-                                    البريد الإلكتروني
-
-                                </h4>
-
-
-                                <a
-                                    href="mailto:nbdaltuhr@gmail.com"
-                                    class="text-gray-200 hover:text-white transition-colors block text-lg">
-
-                                    nbdaltuhr@gmail.com
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <!-- Social Media -->
-                        <div class="pt-6 border-t border-white/20">
-
-                            <h4
-                                class="text-lg font-bold text-white mb-4"
-                                data-i18n="social_title">
-
-                                منصات التواصل الاجتماعي
-
-                            </h4>
-
-
-                            <div class="flex flex-wrap gap-4">
-
-
-                                <!-- Instagram -->
-                                <a
-                                    href="https://www.instagram.com/nabdaltuhar"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="inline-flex items-center gap-2 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 px-6 py-3 rounded-full text-white font-bold hover:opacity-90 shadow-lg">
-
-                                    📸
-
-                                    <span data-i18n="social_insta">
-                                        إنستجرام
-                                    </span>
-
-                                </a>
-
-
-                                <!-- Snapchat -->
-                                <a
-                                    href="https://www.snapchat.com/add/nabdaltuhar2026"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="inline-flex items-center gap-2 bg-[#FFFC00] px-6 py-3 rounded-full text-black font-bold hover:opacity-90 shadow-lg">
-
-                                    👻
-
-                                    <span data-i18n="social_snap">
-                                        سناب شات
-                                    </span>
-
-                                </a>
-
-
-                                <!-- Facebook -->
-                                <a
-                                    href="https://www.facebook.com/share/1J6JJ3cEbU/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="inline-flex items-center gap-2 bg-[#1877F2] px-6 py-3 rounded-full text-white font-bold hover:opacity-90 shadow-lg">
-
-                                    👍
-
-                                    <span data-i18n="social_fb">
-                                        فيسبوك
-                                    </span>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
                     </div>
-
                 </div>
 
-
-
-                <!-- ============================
-                     GOOGLE MAPS
-                ============================= -->
-
                 <div class="fade-up">
-
                     <div class="map-wrapper">
-
-
-                        <!-- Google Maps -->
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.3277051392934!2d46.771108000000005!3d24.784229799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2eff007f66197d%3A0x564b4f6ab17b080b!2z2YXYsdmD2LIg2YbYqNi2INin2YTYt9mH2LEg2YTZhNit2KzYp9mF2Kk!5e0!3m2!1sen!2seg!4v1786902936877!5m2!1sen!2seg"
                             title="موقع مركز نبض الطهر للحجامة في الرياض"
@@ -1240,459 +661,220 @@
                             loading="lazy"
                             referrerpolicy="strict-origin-when-cross-origin">
                         </iframe>
-
-
-                        <!-- CUSTOM WHITE MAP CARD -->
                         <div class="map-info-card">
-
-                            <h3>
-                                📍 مركز نبض الطهر للحجامة
-                            </h3>
-
-
+                            <h3>📍 مركز نبض الطهر للحجامة</h3>
                             <p>
-                                الرياض، حي اشبليا<br>
+                                الرياض، حي اشبيليا<br>
                                 شارع الشيخ حسن بن حسين بن علي<br>
                                 بجوار مطعم ادار
                             </p>
-
-
-                            <!-- Direct Directions -->
-                            <a
-                                href="https://www.google.com/maps/dir/?api=1&destination=24.7842298,46.771108"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="map-direction-button">
-
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=24.7842298,46.771108" target="_blank" rel="noopener noreferrer" class="map-direction-button">
                                 <span>📍</span>
-
-                                <span>
-                                    انقر هنا لمعرفة الاتجاه
-                                </span>
-
+                                <span>انقر هنا لمعرفة الاتجاه</span>
                             </a>
-
                         </div>
-
                     </div>
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
 
 
 
     <!-- ================================
          FOOTER
-    ================================= -->
+    ================================ -->
 
-    <footer
-        class="bg-gray-950 text-white py-8 text-center border-t border-brand-dark/50">
-
-        <p>
-            &copy; 2026 مركز نبض الطهر. جميع الحقوق محفوظة.
-        </p>
-
+    <footer class="bg-gray-950 text-white py-8 text-center border-t border-brand-dark/50">
+        <p>&copy; 2026 مركز نبض الطهر للحجامة. جميع الحقوق محفوظة.</p>
     </footer>
 
 
 
     <!-- ================================
          JAVASCRIPT
-    ================================= -->
+    ================================ -->
 
     <script>
 
         /* ================================
-           THEME
-        ================================= */
+            COUNTDOWN TIMER (Next Monday 12:00 AM)
+        ================================ */
+        function getNextMondayMidnight() {
+            const now = new Date();
+            const resultDate = new Date(now.getTime());
+            resultDate.setDate(now.getDate() + ((1 + 7 - now.getDay()) % 7 || 7));
+            resultDate.setHours(0, 0, 0, 0);
+            if (resultDate <= now) {
+                resultDate.setDate(resultDate.getDate() + 7);
+            }
+            return resultDate;
+        }
 
-        function toggleTheme() {
+        const targetTime = getNextMondayMidnight().getTime();
 
-            document.documentElement.classList.toggle('dark');
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetTime - now;
 
-            const isDark =
-                document.documentElement.classList.contains('dark');
+            if (distance < 0) {
+                document.getElementById("countdownTimer").innerHTML = "انتهى العرض";
+                return;
+            }
 
-            document
-                .getElementById('sunIcon')
-                .classList.toggle('hidden', !isDark);
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document
-                .getElementById('moonIcon')
-                .classList.toggle('hidden', isDark);
+            document.getElementById("countdownTimer").innerHTML = 
+                `${days} يوم : ${hours} ساعة : ${minutes} دقيقة : ${seconds} ثانية`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+
+        /* ================================
+            WHATSAPP LEAD FORM INTERCEPTION
+        ================================ */
+        function selectPackage(packageName) {
+            const packageSelect = document.getElementById('clientPackage');
+            for(let i=0; i<packageSelect.options.length; i++) {
+                if(packageSelect.options[i].value.includes(packageName.split(' - ')[0])) {
+                    packageSelect.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('clientName').value.trim();
+            let phone = document.getElementById('clientPhone').value.trim();
+            const dept = document.getElementById('clientDept').value;
+            const pkg = document.getElementById('clientPackage').value;
+
+            // تنظيف رقم الهاتف وإزالة المسافات للتحقق منه برمجياً
+            const cleanPhone = phone.replace(/\s+/g, '');
+            const saudiPhoneRegex = /^05[0-9]{8}$/;
+
+            if (!saudiPhoneRegex.test(cleanPhone)) {
+                alert('الرجاء إدخال رقم جوال سعودي صحيح يتكون من 10 أرقام ويبدأ بـ 05');
+                return;
+            }
+
+            const whatsappMessage = 
+                `السلام عليكم، أرغب في حجز موعد ضمن فعالية أسبوع السنة النبوية:%0a` +
+                `👤 الاسم: ${name}%0a` +
+                `📱 الجوال: ${cleanPhone}%0a` +
+                `🏥 القسم: ${dept}%0a` +
+                `📦 الباقة المختارة: ${pkg}`;
+
+            const whatsappUrl = `https://wa.me/966510633737?text=${whatsappMessage}`;
+            window.open(whatsappUrl, '_blank');
         }
 
 
+        /* ================================
+            THEME
+        ================================ */
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            document.getElementById('sunIcon').classList.toggle('hidden', !isDark);
+            document.getElementById('moonIcon').classList.toggle('hidden', isDark);
+        }
+
 
         /* ================================
-           ANIMATIONS
-        ================================= */
-
-        const observer =
-            new IntersectionObserver(
-
-                (entries) => {
-
-                    entries.forEach(entry => {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add('visible');
-
-                        }
-
-                    });
-
-                },
-
-                {
-                    threshold: 0.1
+            ANIMATIONS
+        ================================ */
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
+            });
+        }, { threshold: 0.1 });
 
-            );
-
-
-        document
-            .querySelectorAll('.fade-up')
-            .forEach(el => observer.observe(el));
-
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 
         /* ================================
-           TRANSLATIONS
-        ================================= */
-
+            TRANSLATIONS
+        ================================ */
         const translations = {
-
             ar: {
-
                 logo: "م. نبض الطهر",
-
-                nav_about: "من نحن",
-
+                nav_packages: "الباقات والعروض",
                 nav_services: "الخدمات",
-
-                nav_faq: "الأسئلة الشائعة",
-
+                nav_features: "لماذا نبض الطهر؟",
                 nav_contact: "اتصل بنا",
-
                 nav_book: "احجز الآن",
-
-                hero_welcome: "مرحباً بكم في",
-
-                hero_title: "مركز نبض الطهر للحجامة",
-
-                hero_desc:
-                    "في مركز نبض الطهر للحجامة، نقدم خدمات الحجامة النبوية والطبية بعناية واهتمام، مع الحرص على توفير تجربة مريحة وآمنة لعملائنا.",
-
-                book_now: "احجز الآن",
-
-                call_now: "اتصل بنا الآن",
-
-                about_mission_title:
-                    "رسالتنا وقيمنا",
-
-                about_mission_desc:
-                    "نحن ملتزمون بتقديم خدمات علاجية طبيعية وفعالة تهدف إلى تحسين صحتكم العامة واستعادة توازن الجسم.",
-
-                about_badge:
-                    "من نحن",
-
-                about_title:
-                    "أفضل خدمات الحجامة والعلاج بالطب البديل",
-
-                about_desc:
-                    "في مركز نبض الطهر للحجامة، نقدم خدمات الحجامة النبوية والطبية بعناية واهتمام، ونسعى لتقديم جلسات مريحة ومهنية تلبي احتياجاتكم.",
-
-                services_badge:
-                    "خدماتنا",
-
-                services_title:
-                    "الخدمات العلاجية",
-
-                service_cupping:
-                    "أنواع الحجامة",
-
-                cup_wet_title:
-                    "الحجامة الرطبة",
-
-                cup_wet_desc:
-                    "جلسة حجامة رطبة يتم تقديمها وفق الإجراءات المعتمدة في المركز.",
-
-                cup_dry_title:
-                    "الحجامة الجافة",
-
-                cup_dry_desc:
-                    "تستخدم الحجامة الجافة ضمن جلسات العناية والاسترخاء حسب تقييم الحالة.",
-
-                cup_massage_title:
-                    "الحجامة المتزحلقة",
-
-                cup_massage_desc:
-                    "جلسات الحجامة المتزحلقة حسب الخدمات المتوفرة في المركز.",
-
-                service_altmed:
-                    "أنواع الطب البديل",
-
-                alt_acu_title:
-                    "الإبر الصينية",
-
-                alt_acu_desc:
-                    "جلسات الإبر الصينية حسب الخدمات المتاحة بالمركز.",
-
-                alt_herb_title:
-                    "العلاج بالأعشاب",
-
-                alt_herb_desc:
-                    "خدمات العلاج بالأعشاب حسب ما يقدمه المركز.",
-
-                alt_massage_title:
-                    "التدليك العلاجي",
-
-                alt_massage_desc:
-                    "جلسات تدليك علاجية حسب الخدمات المتاحة بالمركز.",
-
-                faq_badge:
-                    "معلومات تهمك",
-
-                faq_title:
-                    "الأسئلة الشائعة",
-
-                faq_desc:
-                    "مرحبًا بك في صفحة الأسئلة الشائعة لمركز نبض الطهر للحجامة! إذا كانت لديك أي أسئلة إضافية حول خدمات الحجامة، يرجى التواصل معنا.",
-
-                contact_title:
-                    "تواصل معنا",
-
-                contact_desc:
-                    "نحن هنا لخدمتك والإجابة على استفساراتك.",
-
-                contact_address:
-                    "العنوان",
-
-                contact_address_val:
-                    "الرياض حي اشبليا - شارع الشيخ حسن بن حسين بن علي بجوار مطعم ادار",
-
-                contact_phone:
-                    "رقم الهاتف",
-
-                contact_email:
-                    "البريد الإلكتروني",
-
-                social_title:
-                    "منصات التواصل الاجتماعي",
-
-                social_insta:
-                    "إنستجرام",
-
-                social_snap:
-                    "سناب شات",
-
-                social_fb:
-                    "فيسبوك"
-
+                hero_welcome: "مرحباً بكم في أسبوع السنة النبوية",
+                hero_title: "مركز نبض الطهر للحجامة بالرياض",
+                hero_desc: "عروض خاصة واستثنائية لإحياء السنة النبوية في الوقاية والعلاج بأسعار مميزة وعناية طبية فائقة.",
+                countdown_title: "⏳ عجل بالأجر والشفاء - متبقي على إغلاق حجز أسبوع السنة النبوية:",
+                pkg1_title: "الباقة الملكية الشاملة",
+                pkg1_desc: "12 كأس حجامة شاملة للنقاط النبوية والظهر والكتفين لتنقية الدم واستعادة النشاط الكامل.",
+                pkg2_title: "الباقة الخفيفة للنشاط",
+                pkg2_desc: "6 كؤوس حجامة مركزة لتخفيف الإجهاد السريع وتنشيط الدورة الدموية.",
+                services_badge: "خدماتنا المتخصصة",
+                services_title: "جلسات مصممة لحل آلامك وضغط حياتك اليومية",
+                srv1_title: "الحجامة الوقائية النبوية",
+                srv1_desc: "تستهدف النقاط النبوية المعتمدة لتنقية الدم، التخلص من الخمول والسموم المتراكمة، وإعادة الحيوية اليومية.",
+                srv2_title: "الحجامة العلاجية المتخصصة",
+                srv2_desc: "حل فوري لآلام الظهر المزمنة، تشنجات عضلة الأبهر الناتجة عن الجلوس الطويل المكتبي، والصداع النصفي.",
+                srv3_title: "حجامة الرياضيين واللياقة",
+                srv3_desc: "مخصصة للرياضيين ورواد النادي لتفكيك العقد العضلية، زيادة تدفق الأكسجين، وتسريع التعافي بعد التمارين.",
+                form_title: "نموذج الحجز الفوري لأسبوع السنة النبوية",
+                form_desc: "املأ بياناتك أدناه وسيتم تحويلك فوراً لتأكيد الموعد عبر الواتساب مع خدمة العملاء."
             },
-
-
             en: {
-
-                logo:
-                    "N. Al-Tuhr",
-
-                nav_about:
-                    "About Us",
-
-                nav_services:
-                    "Services",
-
-                nav_faq:
-                    "FAQ",
-
-                nav_contact:
-                    "Contact",
-
-                nav_book:
-                    "Book Now",
-
-                hero_welcome:
-                    "Welcome to",
-
-                hero_title:
-                    "Nabd Al-Tuhr Cupping Center",
-
-                hero_desc:
-                    "At Nabd Al-Tuhr Cupping Center, we provide professional cupping services with care and attention to your comfort.",
-
-                book_now:
-                    "Book Now",
-
-                call_now:
-                    "Call Us Now",
-
-                about_mission_title:
-                    "Our Mission & Values",
-
-                about_mission_desc:
-                    "We are committed to providing professional services with care and attention.",
-
-                about_badge:
-                    "About Us",
-
-                about_title:
-                    "Professional Cupping Services",
-
-                about_desc:
-                    "At Nabd Al-Tuhr Cupping Center, we provide professional cupping sessions with care and attention to your comfort.",
-
-                services_badge:
-                    "Our Services",
-
-                services_title:
-                    "Our Services",
-
-                service_cupping:
-                    "Cupping Types",
-
-                cup_wet_title:
-                    "Wet Cupping",
-
-                cup_wet_desc:
-                    "Wet cupping sessions are provided according to the center's procedures.",
-
-                cup_dry_title:
-                    "Dry Cupping",
-
-                cup_dry_desc:
-                    "Dry cupping is offered as part of relaxation and wellness sessions.",
-
-                cup_massage_title:
-                    "Sliding Cupping",
-
-                cup_massage_desc:
-                    "Sliding cupping sessions according to the services available at the center.",
-
-                service_altmed:
-                    "Alternative Medicine",
-
-                alt_acu_title:
-                    "Acupuncture",
-
-                alt_acu_desc:
-                    "Acupuncture sessions according to the services available at the center.",
-
-                alt_herb_title:
-                    "Herbal Therapy",
-
-                alt_herb_desc:
-                    "Herbal therapy services according to what the center provides.",
-
-                alt_massage_title:
-                    "Therapeutic Massage",
-
-                alt_massage_desc:
-                    "Therapeutic massage sessions according to the services available at the center.",
-
-                faq_badge:
-                    "Important Info",
-
-                faq_title:
-                    "Frequently Asked Questions",
-
-                faq_desc:
-                    "Welcome to the Nabd Al-Tuhr Cupping Center FAQ. If you have any additional questions, please contact us.",
-
-                contact_title:
-                    "Contact Us",
-
-                contact_desc:
-                    "We are here to serve you and answer your inquiries.",
-
-                contact_address:
-                    "Address",
-
-                contact_address_val:
-                    "Riyadh, Ishbiliyah District - Sheikh Hassan Bin Hussein Bin Ali Street, next to Adar Restaurant",
-
-                contact_phone:
-                    "Phone Number",
-
-                contact_email:
-                    "Email Address",
-
-                social_title:
-                    "Social Media",
-
-                social_insta:
-                    "Instagram",
-
-                social_snap:
-                    "Snapchat",
-
-                social_fb:
-                    "Facebook"
-
+                logo: "N. Al-Tuhr",
+                nav_packages: "Packages",
+                nav_services: "Services",
+                nav_features: "Why Us",
+                nav_contact: "Contact",
+                nav_book: "Book Now",
+                hero_welcome: "Welcome to Prophetic Hijama Week",
+                hero_title: "Nabd Al-Tuhr Cupping Center Riyadh",
+                hero_desc: "Special exceptional offers to revive the Sunnah in preventive care with special prices and high medical care.",
+                countdown_title: "⏳ Hurry for Reward & Healing - Time remaining to close Prophetic Hijama Week booking:",
+                pkg1_title: "Royal Sunnah Package",
+                pkg1_desc: "12 comprehensive cupping cups targeting Sunnah points, back, and shoulders for full detox.",
+                pkg2_title: "Light Activity Package",
+                pkg2_desc: "6 focused cupping cups for quick fatigue relief and circulation boost.",
+                services_badge: "Specialized Services",
+                services_title: "Sessions Designed to Relieve Your Daily Pain & Fatigue",
+                srv1_title: "Prophetic Preventive Cupping",
+                srv1_desc: "Targets certified Sunnah points to purify blood and eliminate lethargy.",
+                srv2_title: "Specialized Therapeutic Cupping",
+                srv2_desc: "Direct relief for chronic back pain, Abhar muscle stiffness, and migraines.",
+                srv3_title: "Sports & Fitness Cupping",
+                srv3_desc: "Designed for athletes to break muscle knots and accelerate post-workout recovery.",
+                form_title: "Instant Prophetic Hijama Week Booking",
+                form_desc: "Fill in your details below to be redirected instantly via WhatsApp for confirmation."
             }
-
         };
-
-
-
-        /* ================================
-           LANGUAGE SWITCH
-        ================================= */
 
         let currentLang = 'ar';
 
-
         function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.getElementById('langToggleBtn').innerText = currentLang === 'ar' ? 'EN' : 'عربي';
 
-            currentLang =
-                currentLang === 'ar'
-                    ? 'en'
-                    : 'ar';
-
-
-            document.documentElement.lang =
-                currentLang;
-
-
-            document.documentElement.dir =
-                currentLang === 'ar'
-                    ? 'rtl'
-                    : 'ltr';
-
-
-            document.getElementById('langToggleBtn').innerText =
-                currentLang === 'ar'
-                    ? 'EN'
-                    : 'عربي';
-
-
-            document
-                .querySelectorAll('[data-i18n]')
-                .forEach(el => {
-
-                    const key =
-                        el.getAttribute('data-i18n');
-
-
-                    if (
-                        translations[currentLang] &&
-                        translations[currentLang][key]
-                    ) {
-
-                        el.innerText =
-                            translations[currentLang][key];
-
-                    }
-
-                });
-
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    el.innerText = translations[currentLang][key];
+                }
+            });
         }
 
     </script>
