@@ -17,7 +17,7 @@
 
     <title>مركز نبض الطهر للحجامة - فرع حي إشبيلية بالرياض</title>
     <meta name="description" content="فرع مركز نبض الطهر للحجامة في حي إشبيلية بالرياض: العنوان، ساعات العمل، الخريطة والاتجاهات، وحجز لقسم الرجال وقسم النساء.">
-    <meta name="keywords" content="حجامة في الرياض, حجامة اشبيلية, مركز حجامة الرياض, نبض الطهر, عرض أكتوبر حجامة">
+    <meta name="keywords" content="حجامة في الرياض, حجامة اشبيلية, مركز حجامة الرياض, نبض الطهر, حجامة السنة النبوية">
     <meta name="robots" content="index, follow">
     <meta name="author" content="مركز نبض الطهر للحجامة">
     <meta name="theme-color" content="#F97316">
@@ -147,12 +147,15 @@
                 نستقبلك في حي إشبيلية، شارع الشيخ حسن بن حسين بن علي، بجوار مطعم أدار.
             </p>
             <div class="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 justify-center">
-                <a href="offers.html" class="btn col-span-2 bg-white text-brand-hover px-8 py-4 rounded-2xl font-extrabold text-lg shadow-xl hover:bg-orange-50" data-i18n="cta_offers">🎁 شاهد عرض أكتوبر</a>
+                <a href="offers.html" class="btn col-span-2 bg-white text-brand-hover px-8 py-4 rounded-2xl font-extrabold text-lg shadow-xl hover:bg-orange-50" data-i18n="cta_offers">🎁 شاهد عرض السنة النبوية</a>
                 <a href="booking-men.html" class="btn bg-brand-hover hover:bg-orange-700 text-white px-6 py-4 rounded-2xl font-bold shadow-xl" data-i18n="cta_men">حجز الرجال</a>
                 <a href="booking-women.html" class="btn bg-brand-hover hover:bg-orange-700 text-white px-6 py-4 rounded-2xl font-bold shadow-xl" data-i18n="cta_women">حجز النساء</a>
             </div>
         </div>
     </header>
+
+    <!-- أيام السنة القادمة (تُحسب تلقائياً) -->
+    <section id="sunnahBox" class="bg-orange-50 dark:bg-[#2a170a]"></section>
 
     <!-- معلومات الفرع -->
     <section class="py-16 bg-white dark:bg-brand-darkBg">
@@ -230,6 +233,7 @@
 
 <script>
 const PAGE = 'home';
+renderSunnah('info');
 
 /* ---------- القائمة والوضع الداكن واللغة (مشترك بين الصفحات) ---------- */
 function toggleMenu() {
@@ -253,11 +257,11 @@ const translations = {
     ar: { logo: 'م. نبض الطهر', nav_home: 'الرئيسية', nav_offers: 'العروض', nav_men: 'حجز الرجال', nav_women: 'حجز النساء', nav_book: 'احجز الآن',
           hero_welcome: '📍 فرع حي إشبيلية - الرياض', hero_title: 'مركز نبض الطهر للحجامة',
           hero_desc: 'نستقبلك في حي إشبيلية، شارع الشيخ حسن بن حسين بن علي، بجوار مطعم أدار.',
-          cta_offers: '🎁 شاهد عرض أكتوبر', cta_men: 'حجز الرجال', cta_women: 'حجز النساء' },
+          cta_offers: '🎁 شاهد عرض السنة النبوية', cta_men: 'حجز الرجال', cta_women: 'حجز النساء' },
     en: { logo: 'N. Al-Tuhr', nav_home: 'Home', nav_offers: 'Offers', nav_men: "Men's booking", nav_women: "Women's booking", nav_book: 'Book now',
           hero_welcome: '📍 Ishbiliyah branch - Riyadh', hero_title: 'Nabd Al-Tuhr Cupping Center',
           hero_desc: 'Find us in Ishbiliyah, Sheikh Hassan bin Hussein bin Ali Street, next to Adar restaurant.',
-          cta_offers: '🎁 See the October offer', cta_men: "Men's booking", cta_women: "Women's booking" }
+          cta_offers: '🎁 See the Prophetic Sunnah offer', cta_men: "Men's booking", cta_women: "Women's booking" }
 };
 let currentLang = 'ar';
 function toggleLanguage() {
@@ -271,9 +275,57 @@ function toggleLanguage() {
     });
 }
 
+
+/* ---------- أيام الحجامة المستحبة (17 و19 و21 هجرياً) تُحسب تلقائياً من تقويم أم القرى ---------- */
+function sunnahDays(count) {
+    try {
+        const R = { timeZone: 'Asia/Riyadh' };
+        const hf = new Intl.DateTimeFormat('en-u-ca-islamic-umalqura-nu-latn', { ...R, day: 'numeric' });
+        const hm = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura-nu-latn', { ...R, month: 'long' });
+        const wd = new Intl.DateTimeFormat('ar-SA', { ...R, weekday: 'long' });
+        const gf = new Intl.DateTimeFormat('en-CA', { ...R, year: 'numeric', month: '2-digit', day: '2-digit' });
+        const gm = new Intl.DateTimeFormat('ar-SA-u-ca-gregory-nu-latn', { ...R, day: 'numeric', month: 'long' });
+        const out = [], t0 = Date.now();
+        for (let i = 0; i < 75 && out.length < (count || 3); i++) {
+            const x = new Date(t0 + i * 864e5), d = +hf.format(x);
+            if (d === 17 || d === 19 || d === 21) out.push({ iso: gf.format(x), hd: d, hm: hm.format(x), wd: wd.format(x), g: gm.format(x), today: i === 0 });
+        }
+        return out;
+    } catch (e) { return []; }
+}
+
+function renderSunnah(mode) {
+    const box = document.getElementById('sunnahBox');
+    if (!box) return;
+    const days = sunnahDays(3);
+    if (!days.length) { box.remove(); return; }
+    const cards = days.map(d => {
+        const head = `<div class="flex items-center justify-between gap-2"><span class="font-extrabold text-lg text-gray-900 dark:text-white">${d.wd}</span>${d.today ? '<span class="bg-green-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">اليوم</span>' : ''}</div>
+            <div class="text-brand-hover font-extrabold text-xl mt-1">${d.hd} ${d.hm}</div>
+            <div class="text-sm text-gray-500 dark:text-gray-300">${d.g}</div>`;
+        if (mode === 'pick') {
+            return `<button type="button" data-sday="${d.iso}" onclick="pickDay('${d.iso}')" class="sd text-start rounded-2xl border-2 border-orange-200 dark:border-gray-700 bg-white dark:bg-brand-darkCard p-4 transition">${head}<div class="text-xs font-bold text-brand-hover mt-2">اضغط لاختيار هذا اليوم</div></button>`;
+        }
+        return `<div class="rounded-2xl border-2 border-orange-200 dark:border-gray-700 bg-white dark:bg-brand-darkCard p-4">${head}
+            <div class="grid grid-cols-2 gap-2 mt-3">
+                <a href="booking-men.html?d=${d.iso}" class="btn text-center bg-brand-primary hover:bg-brand-hover text-white py-2 rounded-xl font-bold text-sm">رجال</a>
+                <a href="booking-women.html?d=${d.iso}" class="btn text-center bg-brand-hover hover:bg-orange-700 text-white py-2 rounded-xl font-bold text-sm">نساء</a>
+            </div></div>`;
+    }).join('');
+    box.innerHTML = `<div class="max-w-5xl mx-auto px-4 py-8">
+        <div class="text-center mb-5">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white">🌙 أيام الحجامة المستحبة القادمة</h2>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">الأيام 17 و19 و21 من الشهر الهجري، لمن يفضّل الهدي النبوي في التوقيت. هي اختيار ديني وليست شرطاً طبياً، ويمكنك الحجز في أي يوم.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">${cards}</div>
+        <p class="text-xs text-center text-gray-500 dark:text-gray-400 mt-3">التواريخ حسب تقويم أم القرى، وقد تختلف يوماً واحداً بحسب رؤية الهلال.</p>
+    </div>`;
+}
+
 /* تلوين الرابط الحالي في القائمة + إظهار #اسم-الصفحة في شريط العنوان */
 document.querySelectorAll('[data-nav]').forEach(a => a.classList.toggle('active', a.dataset.nav === PAGE));
-history.replaceState(null, '', '#' + PAGE);
+/* داخل معاينة Claude يرفض المتصفح هذا السطر، لذلك وضعناه داخل try حتى لا يوقف الصفحة. على موقعك الحقيقي يعمل ويظهر # في الرابط */
+try { history.replaceState(null, '', '#' + PAGE); } catch (e) {}
 </script>
 </body>
 </html>

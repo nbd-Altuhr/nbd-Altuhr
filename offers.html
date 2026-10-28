@@ -15,14 +15,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>عرض أكتوبر للحجامة في الرياض | مركز نبض الطهر</title>
-    <meta name="description" content="عرض أكتوبر في مركز نبض الطهر للحجامة بحي إشبيلية: جلسة 6 كاسات بـ 125 ريال، و8 كاسات بـ 149 ريال، و12 كاسة بـ 179 ريال.">
-    <meta name="keywords" content="حجامة في الرياض, حجامة اشبيلية, مركز حجامة الرياض, نبض الطهر, عرض أكتوبر حجامة">
+    <title>عرض السنة النبوية وأيام الحجامة المستحبة في الرياض | نبض الطهر</title>
+    <meta name="description" content="عرض السنة النبوية في مركز نبض الطهر للحجامة بحي إشبيلية: الباقة الملكية 12 كأس بـ 190 ريال بدل 250، والباقة الخفيفة 6 كؤوس بـ 129 ريال بدل 150.">
+    <meta name="keywords" content="حجامة في الرياض, حجامة اشبيلية, مركز حجامة الرياض, نبض الطهر, حجامة السنة النبوية">
     <meta name="robots" content="index, follow">
     <meta name="author" content="مركز نبض الطهر للحجامة">
     <meta name="theme-color" content="#F97316">
 
-    <meta property="og:title" content="عرض أكتوبر للحجامة في الرياض | مركز نبض الطهر">
+    <meta property="og:title" content="عرض السنة النبوية وأيام الحجامة المستحبة في الرياض | نبض الطهر">
     <meta property="og:description" content="مركز نبض الطهر للحجامة - فرع حي إشبيلية بالرياض">
     <meta property="og:type" content="website">
     <meta property="og:image" content="general-profile-picture.png">
@@ -140,14 +140,15 @@
     <header class="hero-pattern pt-14 pb-14 relative text-white overflow-hidden">
         <div class="absolute inset-0 bg-black opacity-40"></div>
         <div class="max-w-3xl mx-auto px-4 relative z-10 text-center">
-            <span class="inline-block bg-white/15 px-4 py-1 rounded-full font-bold text-sm mb-4">🎁 عرض شهر أكتوبر</span>
-            <h1 class="text-3xl md:text-5xl font-extrabold mb-4">عرض أكتوبر في نبض الطهر</h1>
-            <p class="text-lg text-gray-100">ثلاث باقات بأسعار خاصة في فرع إشبيلية. اختر باقتك واحجز لقسم الرجال أو النساء.</p>
+            <span class="inline-block bg-white/15 px-4 py-1 rounded-full font-bold text-sm mb-4">🎁 عرض السنة النبوية</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4">عرض السنة النبوية في نبض الطهر</h1>
+            <p class="text-lg text-gray-100">باقتان بأسعار خاصة في فرع إشبيلية لإحياء السنة النبوية. اختر باقتك واحجز لقسم الرجال أو النساء.</p>
         </div>
     </header>
+    <section id="sunnahBox" class="bg-orange-50 dark:bg-[#2a170a]"></section>
     <section class="py-14">
         <div class="max-w-5xl mx-auto px-4">
-            <div id="offersGrid" class="grid grid-cols-1 md:grid-cols-3 gap-7 md:items-center"></div>
+            <div id="offersGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto"></div>
             <div class="mt-10 bg-orange-50 dark:bg-brand-darkCard rounded-2xl p-5 text-center text-sm text-gray-700 dark:text-gray-200">
                 كل الباقات تشمل: ✔ تقييماً أولياً قبل الجلسة &nbsp; ✔ أدوات أحادية الاستخدام &nbsp; ✔ إرشادات بعد الجلسة
             </div>
@@ -184,32 +185,35 @@
 const PAGE = 'offers';
 
 /* ===================================================================
-   عرض أكتوبر: عدّل الأسماء والأسعار هنا
+   عرض السنة النبوية: عدّل الأسماء والأسعار هنا (price = السعر الحالي، old = السعر قبل الخصم)
    مهم: نفس هذه القائمة موجودة في 3 ملفات (offers و booking-men و booking-women)
    فعند تغيير سعر عدّله في الملفات الثلاثة.
 =================================================================== */
 const PACKAGES = [
-    { id: 'light',    name: 'جلسة خفيفة',  cups: 6,  price: 125, badge: '' },
-    { id: 'balanced', name: 'توازن مثالي', cups: 8,  price: 149, badge: 'الأكثر طلباً' },
-    { id: 'full',     name: 'جلسة متكاملة', cups: 12, price: 179, badge: 'أفضل قيمة' }
+    { id: 'royal', name: 'الباقة الملكية الشاملة', cups: 12, price: 190, old: 250, badge: '⭐ الباقة الأبرز',
+      desc: '12 كأس حجامة تشمل المواضع النبوية والظهر والكتفين، لتجديد النشاط وتخفيف الإجهاد.' },
+    { id: 'light', name: 'الباقة الخفيفة للنشاط', cups: 6, price: 129, old: 150, badge: '⚡ للنشاط السريع',
+      desc: '6 كؤوس حجامة مركزة لتخفيف الإجهاد السريع وتنشيط الدورة الدموية.' }
 ];
 const cupsText = n => n + (n <= 10 ? ' كاسات' : ' كاسة');
 
 /* ---------- بطاقات العروض ---------- */
 document.getElementById('offersGrid').innerHTML = PACKAGES.map(p => {
-    const top = p.id === 'balanced';
+    const top = p.id === 'royal';
     return `
-    <div class="relative bg-white dark:bg-brand-darkCard rounded-3xl p-7 text-center ${top ? 'border-4 border-brand-primary shadow-2xl md:py-10' : 'border-2 border-gray-200 dark:border-gray-700 shadow-lg'}">
+    <div class="relative bg-white dark:bg-brand-darkCard rounded-3xl p-7 text-center ${top ? 'border-4 border-brand-primary shadow-2xl' : 'border-2 border-gray-200 dark:border-gray-700 shadow-lg'}">
         ${p.badge ? `<div class="absolute -top-4 left-1/2 -translate-x-1/2 ${top ? 'bg-brand-primary' : 'bg-brand-hover'} text-white px-4 py-1 rounded-full text-sm font-extrabold shadow whitespace-nowrap">${p.badge}</div>` : ''}
         <div class="text-6xl font-extrabold text-brand-hover leading-none">${p.cups}</div>
         <div class="text-gray-500 dark:text-gray-300 font-bold mb-3">${p.cups <= 10 ? 'كاسات' : 'كاسة'}</div>
         <h3 class="text-xl font-extrabold text-gray-900 dark:text-white mb-3">${p.name}</h3>
-        <div class="text-4xl font-extrabold text-red-600 mb-6">${p.price} <span class="text-lg">ريال</span></div>
+        <h4 class="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed font-normal">${p.desc}</h4>
+        <div class="mb-6"><span class="text-4xl font-extrabold text-red-600">${p.price} <span class="text-lg">ريال</span></span> <span class="text-lg text-gray-400 line-through">${p.old} ريال</span></div>
         <div class="grid grid-cols-2 gap-3">
             <a href="booking-men.html?pkg=${p.id}" class="btn text-center bg-brand-primary hover:bg-brand-hover text-white py-3 rounded-2xl font-bold shadow-lg">احجز - رجال</a>
             <a href="booking-women.html?pkg=${p.id}" class="btn text-center bg-brand-hover hover:bg-orange-700 text-white py-3 rounded-2xl font-bold shadow-lg">احجزي - نساء</a>
         </div>
     </div>`; }).join('');
+renderSunnah('info');
 
 /* ---------- القائمة والوضع الداكن واللغة (مشترك بين الصفحات) ---------- */
 function toggleMenu() {
@@ -233,11 +237,11 @@ const translations = {
     ar: { logo: 'م. نبض الطهر', nav_home: 'الرئيسية', nav_offers: 'العروض', nav_men: 'حجز الرجال', nav_women: 'حجز النساء', nav_book: 'احجز الآن',
           hero_welcome: '📍 فرع حي إشبيلية - الرياض', hero_title: 'مركز نبض الطهر للحجامة',
           hero_desc: 'نستقبلك في حي إشبيلية، شارع الشيخ حسن بن حسين بن علي، بجوار مطعم أدار.',
-          cta_offers: '🎁 شاهد عرض أكتوبر', cta_men: 'حجز الرجال', cta_women: 'حجز النساء' },
+          cta_offers: '🎁 شاهد عرض السنة النبوية', cta_men: 'حجز الرجال', cta_women: 'حجز النساء' },
     en: { logo: 'N. Al-Tuhr', nav_home: 'Home', nav_offers: 'Offers', nav_men: "Men's booking", nav_women: "Women's booking", nav_book: 'Book now',
           hero_welcome: '📍 Ishbiliyah branch - Riyadh', hero_title: 'Nabd Al-Tuhr Cupping Center',
           hero_desc: 'Find us in Ishbiliyah, Sheikh Hassan bin Hussein bin Ali Street, next to Adar restaurant.',
-          cta_offers: '🎁 See the October offer', cta_men: "Men's booking", cta_women: "Women's booking" }
+          cta_offers: '🎁 See the Prophetic Sunnah offer', cta_men: "Men's booking", cta_women: "Women's booking" }
 };
 let currentLang = 'ar';
 function toggleLanguage() {
@@ -251,9 +255,57 @@ function toggleLanguage() {
     });
 }
 
+
+/* ---------- أيام الحجامة المستحبة (17 و19 و21 هجرياً) تُحسب تلقائياً من تقويم أم القرى ---------- */
+function sunnahDays(count) {
+    try {
+        const R = { timeZone: 'Asia/Riyadh' };
+        const hf = new Intl.DateTimeFormat('en-u-ca-islamic-umalqura-nu-latn', { ...R, day: 'numeric' });
+        const hm = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura-nu-latn', { ...R, month: 'long' });
+        const wd = new Intl.DateTimeFormat('ar-SA', { ...R, weekday: 'long' });
+        const gf = new Intl.DateTimeFormat('en-CA', { ...R, year: 'numeric', month: '2-digit', day: '2-digit' });
+        const gm = new Intl.DateTimeFormat('ar-SA-u-ca-gregory-nu-latn', { ...R, day: 'numeric', month: 'long' });
+        const out = [], t0 = Date.now();
+        for (let i = 0; i < 75 && out.length < (count || 3); i++) {
+            const x = new Date(t0 + i * 864e5), d = +hf.format(x);
+            if (d === 17 || d === 19 || d === 21) out.push({ iso: gf.format(x), hd: d, hm: hm.format(x), wd: wd.format(x), g: gm.format(x), today: i === 0 });
+        }
+        return out;
+    } catch (e) { return []; }
+}
+
+function renderSunnah(mode) {
+    const box = document.getElementById('sunnahBox');
+    if (!box) return;
+    const days = sunnahDays(3);
+    if (!days.length) { box.remove(); return; }
+    const cards = days.map(d => {
+        const head = `<div class="flex items-center justify-between gap-2"><span class="font-extrabold text-lg text-gray-900 dark:text-white">${d.wd}</span>${d.today ? '<span class="bg-green-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">اليوم</span>' : ''}</div>
+            <div class="text-brand-hover font-extrabold text-xl mt-1">${d.hd} ${d.hm}</div>
+            <div class="text-sm text-gray-500 dark:text-gray-300">${d.g}</div>`;
+        if (mode === 'pick') {
+            return `<button type="button" data-sday="${d.iso}" onclick="pickDay('${d.iso}')" class="sd text-start rounded-2xl border-2 border-orange-200 dark:border-gray-700 bg-white dark:bg-brand-darkCard p-4 transition">${head}<div class="text-xs font-bold text-brand-hover mt-2">اضغط لاختيار هذا اليوم</div></button>`;
+        }
+        return `<div class="rounded-2xl border-2 border-orange-200 dark:border-gray-700 bg-white dark:bg-brand-darkCard p-4">${head}
+            <div class="grid grid-cols-2 gap-2 mt-3">
+                <a href="booking-men.html?d=${d.iso}" class="btn text-center bg-brand-primary hover:bg-brand-hover text-white py-2 rounded-xl font-bold text-sm">رجال</a>
+                <a href="booking-women.html?d=${d.iso}" class="btn text-center bg-brand-hover hover:bg-orange-700 text-white py-2 rounded-xl font-bold text-sm">نساء</a>
+            </div></div>`;
+    }).join('');
+    box.innerHTML = `<div class="max-w-5xl mx-auto px-4 py-8">
+        <div class="text-center mb-5">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white">🌙 أيام الحجامة المستحبة القادمة</h2>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">الأيام 17 و19 و21 من الشهر الهجري، لمن يفضّل الهدي النبوي في التوقيت. هي اختيار ديني وليست شرطاً طبياً، ويمكنك الحجز في أي يوم.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">${cards}</div>
+        <p class="text-xs text-center text-gray-500 dark:text-gray-400 mt-3">التواريخ حسب تقويم أم القرى، وقد تختلف يوماً واحداً بحسب رؤية الهلال.</p>
+    </div>`;
+}
+
 /* تلوين الرابط الحالي في القائمة + إظهار #اسم-الصفحة في شريط العنوان */
 document.querySelectorAll('[data-nav]').forEach(a => a.classList.toggle('active', a.dataset.nav === PAGE));
-history.replaceState(null, '', '#' + PAGE);
+/* داخل معاينة Claude يرفض المتصفح هذا السطر، لذلك وضعناه داخل try حتى لا يوقف الصفحة. على موقعك الحقيقي يعمل ويظهر # في الرابط */
+try { history.replaceState(null, '', '#' + PAGE); } catch (e) {}
 </script>
 </body>
 </html>
