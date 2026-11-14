@@ -1,331 +1,478 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18474762840"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18474762840');
-      /* ملاحظة: حدث التحويل (Conversion) انتقل من تحميل الصفحة إلى لحظة ضغط العميل على زر تأكيد الحجز، انظر دالة submitBooking أسفل الصفحة */
-    </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حجامة طبية في حي إشبيلية الرياض | نبض الطهر — احجز الآن</title>
+<meta name="description" content="عيادة حجامة وطب بديل في حي إشبيلية شرق الرياض. قسم للرجال وقسم مستقل للنساء، أدوات معقمة، ونستقبلكم يوميًا من ٦ صباحًا حتى ١٢ منتصف الليل. احجز بمكالمة.">
+<meta name="theme-color" content="#1E1A17">
+<link rel="canonical" href="https://nbdaltuhr.sa/ishbiliyah/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "نبض الطهر للحجامة الطبية — فرع إشبيلية",
+  "description": "عيادة حجامة وطب بديل في حي إشبيلية شرق الرياض، بقسم للرجال وقسم مستقل للنساء.",
+  "url": "https://nbdaltuhr.sa/",
+  "telephone": "+966510633737",
+  "areaServed": "الرياض",
+  "address": { "@type": "PostalAddress", "addressLocality": "الرياض", "addressRegion": "منطقة الرياض", "addressCountry": "SA" },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "06:00",
+    "closes": "23:59"
+  }]
+}
+</script>
 
-    <title>مركز نبض الطهر للحجامة - فرع حي إشبيلية بالرياض</title>
-    <meta name="description" content="فرع مركز نبض الطهر للحجامة في حي إشبيلية بالرياض: العنوان، ساعات العمل، الخريطة والاتجاهات، وحجز لقسم الرجال وقسم النساء.">
-    <meta name="keywords" content="حجامة في الرياض, حجامة اشبيلية, مركز حجامة الرياض, نبض الطهر, حجامة السنة النبوية">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="مركز نبض الطهر للحجامة">
-    <meta name="theme-color" content="#F97316">
+<style>
+  :root {
+    /* غيّر هذا اللون إلى لون هوية المركز الدقيق إن اختلف */
+    --brand: #E8741E;
+    --brand-dark: #BF5A0C;
+    --brand-soft: #FDEBDC;
+    --ink: #1E1A17;
+    --ink-2: #2B2521;
+    --cream: #FBF7F2;
+    --line: #EADFD3;
+    --muted: #6B6159;
+    --ok: #1F8A4C;
+    --radius: 16px;
+    --wrap: 1080px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--cream); color: var(--ink);
+    font-family: "Tajawal", "IBM Plex Sans Arabic", system-ui, "Segoe UI", Tahoma, sans-serif;
+    font-size: 17px; line-height: 1.75; padding-bottom: 76px;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 800; }
+  p { margin: 0 0 12px; }
 
-    <meta property="og:title" content="مركز نبض الطهر للحجامة - فرع حي إشبيلية بالرياض">
-    <meta property="og:description" content="مركز نبض الطهر للحجامة - فرع حي إشبيلية بالرياض">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="general-profile-picture.png">
-    <link rel="icon" href="general-profile-picture.png" type="image/png">
+  /* أزرار */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 52px; padding: 0 26px; border-radius: 999px; border: 0; cursor: pointer;
+    font: inherit; font-weight: 700; font-size: 17px; text-decoration: none; text-align: center;
+    transition: transform .15s ease, background-color .15s ease;
+  }
+  .btn:active { transform: scale(.98); }
+  .btn-primary { background: var(--brand); color: #fff; }
+  .btn-primary:hover { background: var(--brand-dark); }
+  .btn-wa { background: #25D366; color: #07351b; }
+  .btn-wa:hover { background: #1fbd5b; }
+  .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.35); }
+  .btn-ghost:hover { background: rgba(255,255,255,.08); }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  :focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  /* الرأس */
+  .topbar { background: var(--ink); color: #fff; position: sticky; top: 0; z-index: 20; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 20px; }
+  .brand img { height: 40px; width: auto; }
+  .brand small { display: block; font-weight: 400; font-size: 12px; color: #cfc6bd; line-height: 1.3; }
+  .topbar .btn { min-height: 44px; padding: 0 18px; font-size: 15px; }
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Cairo', 'sans-serif'] },
-                    colors: {
-                        brand: {
-                            dark: '#F97316',
-                            primary: '#FB923C',
-                            hover: '#EA580C',
-                            cream: '#FFFFFF',
-                            darkBg: '#1F130A',
-                            darkCard: '#3A2112'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+  /* البطل */
+  .hero {
+    background:
+      radial-gradient(520px 320px at 85% 10%, rgba(232,116,30,.35), transparent 70%),
+      radial-gradient(420px 280px at 0% 100%, rgba(232,116,30,.18), transparent 70%),
+      linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+    color: #fff; padding: 44px 0 56px;
+  }
+  .hero .grid { display: grid; gap: 32px; align-items: center; }
+  .status {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500;
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 18px;
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #9a9088; }
+  .status.open .dot { background: #3ddc84; box-shadow: 0 0 0 4px rgba(61,220,132,.2); }
+  .hero h1 { font-size: clamp(30px, 6.4vw, 50px); margin-bottom: 14px; }
+  .hero h1 em { font-style: normal; color: var(--brand); }
+  .hero .lead { color: #e4dcd3; font-size: 19px; max-width: 34em; margin-bottom: 26px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .cta-row .btn { flex: 1 1 200px; }
+  .hero-note { margin-top: 16px; font-size: 14px; color: #bdb3a9; }
+  figure.photo { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,.12); }
+  figure.photo img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
 
-    <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Cairo', sans-serif; overflow-x: hidden; padding-bottom: 68px; }
-        @media (min-width: 1024px) { body { padding-bottom: 0; } }
+  /* شريط الحقائق */
+  .facts { background: #fff; border-bottom: 1px solid var(--line); }
+  .facts ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); }
+  .facts li { padding: 18px 14px; text-align: center; border-bottom: 1px solid var(--line); }
+  .facts li:nth-child(odd) { border-left: 1px solid var(--line); }
+  .facts b { display: block; font-size: 18px; color: var(--brand-dark); }
+  .facts span { font-size: 14px; color: var(--muted); }
 
-        /* كل صفحة مخفية، والصفحة الحالية فقط تظهر */
-        .page { display: block; padding-top: 80px; animation: pageIn .35s ease-out; }
-        @keyframes pageIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-        @media (prefers-reduced-motion: reduce) { .page { animation: none; } }
+  section { padding: 56px 0; }
+  .sec-head { margin-bottom: 28px; }
+  .sec-head h2 { font-size: clamp(24px, 4.6vw, 34px); margin-bottom: 8px; }
+  .sec-head p { color: var(--muted); max-width: 40em; }
+  .kicker { color: var(--brand-dark); font-weight: 700; font-size: 14px; letter-spacing: .02em; display: block; margin-bottom: 6px; }
 
-        .hero-pattern {
-            background-color: #F97316;
-            background-image: radial-gradient(#FB923C 0.5px, transparent 0.5px), radial-gradient(#FB923C 0.5px, #F97316 0.5px);
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
-        }
-        .nav-link.active { color: #EA580C; background: rgba(251,146,60,.14); }
-        .btn { transition: background-color .2s, transform .2s, box-shadow .2s; }
-        .btn:active { transform: scale(.98); }
+  /* الخدمات */
+  .cards { display: grid; gap: 16px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .card .ico { width: 46px; height: 46px; border-radius: 12px; background: var(--brand-soft); color: var(--brand-dark);
+    display: grid; place-items: center; margin-bottom: 14px; font-size: 22px; }
+  .card h3 { font-size: 20px; margin-bottom: 6px; }
+  .card p { color: var(--muted); margin: 0; font-size: 16px; }
 
-        /* الخريطة */
-        .map-wrapper { position: relative; width: 100%; min-height: 400px; height: 100%; border-radius: 24px; overflow: hidden; border: 4px solid rgba(255,255,255,.10); box-shadow: 0 25px 50px -12px rgba(0,0,0,.35); }
-        .map-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; min-height: 400px; border: 0; }
-        .map-info-card { position: absolute; top: 18px; left: 18px; width: min(340px, calc(100% - 36px)); background: rgba(255,255,255,.98); color: #1f2937; border-radius: 18px; padding: 18px; box-shadow: 0 15px 35px rgba(0,0,0,.20); z-index: 20; border: 1px solid rgba(0,0,0,.08); }
-        .map-info-card h3 { margin: 0 0 8px; font-size: 17px; font-weight: 800; color: #ea580c; line-height: 1.5; }
-        .map-info-card p { margin: 0; font-size: 13px; line-height: 1.8; color: #4b5563; }
-        .map-direction-button { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin-top: 14px; padding: 11px 14px; background: #fb923c; color: #fff; border-radius: 12px; font-size: 14px; font-weight: 800; text-decoration: none; }
-        .map-direction-button:hover { background: #ea580c; }
-        @media (max-width: 640px) {
-            .map-wrapper, .map-wrapper iframe { min-height: 430px; }
-            .map-info-card { top: 12px; left: 12px; width: calc(100% - 24px); padding: 15px; }
-        }
-    </style>
+  /* الخطوات */
+  .steps { counter-reset: s; display: grid; gap: 14px; list-style: none; margin: 0; padding: 0; }
+  .steps li { counter-increment: s; background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 20px 22px 20px 20px; display: flex; gap: 16px; align-items: flex-start; }
+  .steps li::before { content: counter(s); flex: none; width: 38px; height: 38px; border-radius: 50%;
+    background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 800; }
+  .steps b { display: block; font-size: 18px; }
+  .steps span { color: var(--muted); font-size: 16px; }
+
+  /* الحجز */
+  .book { background: var(--ink); color: #fff; }
+  .book .sec-head p { color: #cfc6bd; }
+  .book-grid { display: grid; gap: 24px; }
+  form.bk { background: #fff; color: var(--ink); border-radius: var(--radius); padding: 24px; display: grid; gap: 16px; }
+  label { font-weight: 700; font-size: 15px; display: block; margin-bottom: 6px; }
+  input[type=text], input[type=tel], select {
+    width: 100%; min-height: 52px; padding: 0 14px; border: 1.5px solid var(--line); border-radius: 12px;
+    font: inherit; background: #fff; color: var(--ink);
+  }
+  input:focus, select:focus { border-color: var(--brand); outline: none; box-shadow: 0 0 0 3px var(--brand-soft); }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .seg input { position: absolute; opacity: 0; pointer-events: none; }
+  .seg label { margin: 0; text-align: center; border: 1.5px solid var(--line); border-radius: 12px; padding: 13px 8px; cursor: pointer; font-weight: 700; }
+  .seg input:checked + label { border-color: var(--brand); background: var(--brand-soft); color: var(--brand-dark); }
+  .seg input:focus-visible + label { outline: 3px solid var(--brand); outline-offset: 2px; }
+  .form-note { font-size: 13px; color: var(--muted); margin: 0; }
+  .alt { display: grid; gap: 12px; align-content: start; }
+  .alt .box { border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius); padding: 20px; background: rgba(255,255,255,.04); }
+  .alt .box p { color: #e4dcd3; margin-bottom: 14px; }
+  .alt .box .btn { width: 100%; }
+
+  /* الأسئلة */
+  details { background: #fff; border: 1px solid var(--line); border-radius: 14px; margin-bottom: 10px; }
+  summary { cursor: pointer; padding: 18px 20px; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-size: 24px; color: var(--brand-dark); line-height: 1; flex: none; }
+  details[open] summary::after { content: "–"; }
+  details p { padding: 0 20px 18px; margin: 0; color: var(--muted); }
+
+  /* الموقع */
+  .loc { display: grid; gap: 18px; }
+  .loc .card dl { margin: 0; display: grid; gap: 10px; }
+  .loc dt { font-weight: 700; font-size: 14px; color: var(--muted); }
+  .loc dd { margin: 0 0 4px; font-size: 18px; font-weight: 700; }
+  .loc .btn { width: 100%; margin-top: 8px; }
+
+  footer { background: var(--ink); color: #bdb3a9; padding: 32px 0 20px; font-size: 14px; }
+  footer p { margin-bottom: 8px; }
+  footer a { color: #fff; }
+
+  /* شريط الاتصال الثابت للجوال */
+  .dock { position: fixed; inset-inline: 0; bottom: 0; z-index: 30; background: var(--ink);
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    box-shadow: 0 -6px 20px rgba(0,0,0,.25); }
+  .dock .btn { min-height: 50px; padding: 0 12px; font-size: 16px; }
+
+  @media (min-width: 760px) {
+    body { padding-bottom: 0; font-size: 18px; }
+    .dock { display: none; }
+    .hero { padding: 72px 0 84px; }
+    .hero .grid { grid-template-columns: 1.15fr .85fr; }
+    .facts ul { grid-template-columns: repeat(4, 1fr); }
+    .facts li { border-bottom: 0; border-left: 1px solid var(--line); }
+    .facts li:last-child { border-left: 0; }
+    .cards { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: repeat(3, 1fr); }
+    .book-grid { grid-template-columns: 1.1fr .9fr; }
+    .loc { grid-template-columns: 1fr 1fr; }
+    section { padding: 76px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
 </head>
+<body>
 
-<body class="bg-gray-50 dark:bg-brand-darkBg text-gray-800 dark:text-gray-200 antialiased">
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="نبض الطهر">
+      <!-- ضع الشعار الأصلي في images/logo.png بدون أي تعديل عليه -->
+      <img src="images/logo.png" alt="" onload="this.nextElementSibling.hidden=true" onerror="this.remove()">
+      <span>نبض الطهر<small>للحجامة الطبية والطب البديل</small></span>
+    </a>
+    <a class="btn btn-primary" href="tel:+966510633737" data-conv="call">اتصل الآن</a>
+  </div>
+</header>
 
-    <!-- ================================ القائمة العلوية ================================ -->
-    <nav class="bg-white dark:bg-gray-900 shadow-md fixed w-full z-50 top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
+<main id="top">
 
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
-                    <img src="general-profile-picture.png" alt="شعار مركز نبض الطهر للحجامة"
-                         class="h-14 w-14 object-cover rounded-full border-2 border-brand-cream dark:border-gray-700 shadow-sm"
-                         onerror="this.style.display='none'">
-                    <span class="font-bold text-2xl text-brand-dark dark:text-white tracking-tight" data-i18n="logo">م. نبض الطهر</span>
-                </a>
-
-                <div class="hidden lg:flex items-center gap-2">
-                    <a href="index.html" data-nav="home" class="nav-link px-4 py-2 rounded-full text-gray-600 dark:text-gray-300 hover:text-brand-hover font-semibold" data-i18n="nav_home">الرئيسية</a>
-                    <a href="offers.html" data-nav="offers" class="nav-link px-4 py-2 rounded-full text-gray-600 dark:text-gray-300 hover:text-brand-hover font-semibold" data-i18n="nav_offers">العروض</a>
-                    <a href="booking-men.html" data-nav="booking-men" class="nav-link px-4 py-2 rounded-full text-gray-600 dark:text-gray-300 hover:text-brand-hover font-semibold" data-i18n="nav_men">حجز الرجال</a>
-                    <a href="booking-women.html" data-nav="booking-women" class="nav-link px-4 py-2 rounded-full text-gray-600 dark:text-gray-300 hover:text-brand-hover font-semibold" data-i18n="nav_women">حجز النساء</a>
-                </div>
-
-                <div class="flex items-center gap-2 md:gap-3">
-                    <button id="themeToggle" onclick="toggleTheme()" aria-label="تغيير الوضع"
-                            class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-brand-dark dark:text-brand-primary hover:bg-gray-200 dark:hover:bg-gray-700">
-                        <svg id="sunIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                        <svg id="moonIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                    </button>
-                    <button id="langToggleBtn" onclick="toggleLanguage()" class="p-2 font-bold text-gray-700 dark:text-gray-200 hover:text-brand-hover">EN</button>
-                    <a href="offers.html" class="btn hidden sm:inline-flex lg:inline-flex bg-brand-primary hover:bg-brand-hover text-white px-5 py-2 rounded-full font-bold shadow-lg" data-i18n="nav_book">احجز الآن</a>
-                    <button id="menuBtn" class="lg:hidden p-2 rounded-lg border border-gray-200 dark:border-gray-700" aria-label="القائمة" aria-expanded="false" onclick="toggleMenu()">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                    </button>
-                </div>
-            </div>
+  <!-- البطل -->
+  <div class="hero">
+    <div class="wrap grid">
+      <div>
+        <div class="status" id="status" role="status"><span class="dot"></span><span id="statusText">ساعات العمل: ٦ صباحًا – ١٢ منتصف الليل</span></div>
+        <h1>حجامة طبية في <em>حي إشبيلية</em> — احجز موعدك بمكالمة</h1>
+        <p class="lead">عيادة حجامة وطب بديل في شرق الرياض. قسم للرجال وقسم مستقل للنساء، وأدوات معقمة، ونستقبلكم يوميًا من الصباح الباكر حتى منتصف الليل.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:+966510633737" data-conv="call">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+            اتصل واحجز: ٠٥١٠٦٣٣٧٣٧
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/966510633737?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D8%AD%D8%AC%D8%A7%D9%85%D8%A9%20%D9%81%D9%8A%20%D9%81%D8%B1%D8%B9%20%D8%A5%D8%B4%D8%A8%D9%8A%D9%84%D9%8A%D8%A9" data-conv="whatsapp" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg>
+            راسلنا واتساب
+          </a>
         </div>
+        <p class="hero-note">الحجز المسبق يوفّر عليك الانتظار. اتصالك يصل مباشرة لفرع إشبيلية.</p>
+      </div>
+      <!-- صورة الفرع: ضعها في images/ishbiliyah.jpg وستظهر تلقائيًا، وإن لم توجد تختفي بدون كسر التصميم -->
+      <figure class="photo">
+        <img src="images/ishbiliyah.jpg" alt="فرع نبض الطهر في حي إشبيلية" width="800" height="600" fetchpriority="high" onerror="this.closest('figure').remove()">
+      </figure>
+    </div>
+  </div>
 
-        <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 px-4 pb-4 pt-2">
-            <a href="index.html" data-nav="home" class="nav-link block px-4 py-3 rounded-xl font-semibold" data-i18n="nav_home">الرئيسية</a>
-            <a href="offers.html" data-nav="offers" class="nav-link block px-4 py-3 rounded-xl font-semibold" data-i18n="nav_offers">العروض</a>
-            <a href="booking-men.html" data-nav="booking-men" class="nav-link block px-4 py-3 rounded-xl font-semibold" data-i18n="nav_men">حجز الرجال</a>
-            <a href="booking-women.html" data-nav="booking-women" class="nav-link block px-4 py-3 rounded-xl font-semibold" data-i18n="nav_women">حجز النساء</a>
-        </div>
-    </nav>
+  <!-- حقائق سريعة -->
+  <div class="facts">
+    <div class="wrap">
+      <ul>
+        <li><b>٦ ص – ١٢ م</b><span>يوميًا</span></li>
+        <li><b>قسمان منفصلان</b><span>رجال ونساء</span></li>
+        <li><b>أدوات معقمة</b><span>نظافة وتعقيم</span></li>
+        <li><b>حي إشبيلية</b><span>شرق الرياض</span></li>
+      </ul>
+    </div>
+  </div>
 
+  <!-- الخدمات -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">خدماتنا</span>
+        <h2>جلسات حجامة وطب بديل في مكان واحد</h2>
+        <p>نحدد معك المناسب لحالتك قبل الجلسة، ونشرح لك كل خطوة.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><div class="ico" aria-hidden="true">◐</div><h3>حجامة للرجال</h3><p>جلسات حجامة علاجية في قسم الرجال، بحجز موعد يناسبك خلال ساعات العمل الطويلة.</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">◑</div><h3>حجامة للنساء</h3><p>قسم نسائي مستقل ومعقّم، لراحتك وخصوصيتك، بمواعيد حجز مخصصة.</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">✦</div><h3>الحجامة في الأيام المستحبة</h3><p>احجز مسبقًا في الأيام المستحبة للحجامة، فالإقبال فيها يكون أكبر.</p></div>
+        <div class="card"><div class="ico" aria-hidden="true">✚</div><h3>استشارة الطب البديل</h3><p>اسأل عن حالتك قبل الحجز، ونوضح لك إن كانت الجلسة مناسبة لك.</p></div>
+      </div>
+    </div>
+  </section>
 
-    <main>
+  <!-- الخطوات -->
+  <section id="how" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">كيف تحجز</span>
+        <h2>ثلاث خطوات وتكون عندنا</h2>
+      </div>
+      <ol class="steps">
+        <li><div><b>اتصل أو راسلنا</b><span>على ٠٥١٠٦٣٣٧٣٧ أو واتساب، في أي وقت من ٦ صباحًا حتى ١٢ منتصف الليل.</span></div></li>
+        <li><div><b>نحدد الموعد والقسم</b><span>نختار لك الوقت المناسب، ونخبرك بما يلزم قبل الجلسة.</span></div></li>
+        <li><div><b>تحضر لجلستك</b><span>نستقبلك في فرع إشبيلية، ونتابع معك بعد الجلسة.</span></div></li>
+      </ol>
+    </div>
+  </section>
 
-<section class="page" id="page-home">
-
-    <header class="hero-pattern pt-14 pb-16 lg:pt-20 lg:pb-24 relative text-white overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-block bg-white/15 px-4 py-1 rounded-full font-bold text-sm mb-4" data-i18n="hero_welcome">📍 فرع حي إشبيلية - الرياض</span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-5" data-i18n="hero_title">مركز نبض الطهر للحجامة</h1>
-            <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-100 leading-relaxed mb-8" data-i18n="hero_desc">
-                نستقبلك في حي إشبيلية، شارع الشيخ حسن بن حسين بن علي، بجوار مطعم أدار.
-            </p>
-            <div class="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 justify-center">
-                <a href="offers.html" class="btn col-span-2 bg-white text-brand-hover px-8 py-4 rounded-2xl font-extrabold text-lg shadow-xl hover:bg-orange-50" data-i18n="cta_offers">🎁 شاهد عرض السنة النبوية</a>
-                <a href="booking-men.html" class="btn bg-brand-hover hover:bg-orange-700 text-white px-6 py-4 rounded-2xl font-bold shadow-xl" data-i18n="cta_men">حجز الرجال</a>
-                <a href="booking-women.html" class="btn bg-brand-hover hover:bg-orange-700 text-white px-6 py-4 rounded-2xl font-bold shadow-xl" data-i18n="cta_women">حجز النساء</a>
+  <!-- الحجز -->
+  <section class="book" id="booking">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker" style="color:#ffb27a">احجز الآن</span>
+        <h2>اترك بياناتك ونرد عليك على الواتساب</h2>
+        <p>تفتح المحادثة جاهزة بطلبك. أو اتصل مباشرة إن كنت مستعجلًا.</p>
+      </div>
+      <div class="book-grid">
+        <form class="bk" id="bookForm" novalidate>
+          <div>
+            <label for="name">الاسم</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="phone">رقم الجوال</label>
+            <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="05xxxxxxxx" required>
+          </div>
+          <div>
+            <label id="secLbl">القسم</label>
+            <div class="seg" role="radiogroup" aria-labelledby="secLbl">
+              <input type="radio" name="sec" id="secM" value="رجال" checked><label for="secM">رجال</label>
+              <input type="radio" name="sec" id="secW" value="نساء"><label for="secW">نساء</label>
             </div>
+          </div>
+          <div>
+            <label for="when">الوقت المفضل</label>
+            <select id="when" name="when">
+              <option>صباحًا (٦ – ١٢)</option>
+              <option>ظهرًا (١٢ – ٤)</option>
+              <option>مساءً (٤ – ٩)</option>
+              <option>ليلًا (٩ – ١٢)</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit">أرسل طلب الحجز عبر واتساب</button>
+          <p class="form-note" id="formMsg" role="alert"></p>
+        </form>
+
+        <div class="alt">
+          <div class="box">
+            <p><b>تفضّل الاتصال؟</b><br>أسرع طريقة لحجز موعد اليوم.</p>
+            <a class="btn btn-primary" href="tel:+966510633737" data-conv="call">اتصل: ٠٥١٠٦٣٣٧٣٧</a>
+          </div>
+          <div class="box">
+            <p><b>عندك سؤال عن حالتك؟</b><br>اكتب لنا وسنوضح لك قبل الحجز.</p>
+            <a class="btn btn-wa" href="https://wa.me/966510633737" data-conv="whatsapp" rel="noopener">راسلنا واتساب</a>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- أيام السنة القادمة (تُحسب تلقائياً) -->
-    <section id="sunnahBox" class="bg-orange-50 dark:bg-[#2a170a]"></section>
+  <!-- الأسئلة -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">أسئلة شائعة</span>
+        <h2>قبل أن تحجز</h2>
+      </div>
+      <details>
+        <summary>هل أحتاج إلى حجز مسبق؟</summary>
+        <p>يُفضّل الحجز المسبق بمكالمة أو رسالة واتساب لتجنّب الانتظار، خصوصًا في الأيام المستحبة للحجامة.</p>
+      </details>
+      <details>
+        <summary>ما هي ساعات العمل؟</summary>
+        <p>نستقبلكم يوميًا من الساعة ٦ صباحًا حتى ١٢ منتصف الليل.</p>
+      </details>
+      <details>
+        <summary>هل يوجد قسم خاص بالنساء؟</summary>
+        <p>نعم، يوجد قسم نسائي مستقل ومعقّم. اذكري ذلك عند الحجز لنحدد لكِ الموعد المناسب.</p>
+      </details>
+      <details>
+        <summary>هل الحجامة مناسبة لكل شخص؟</summary>
+        <p>ليست مناسبة لكل الحالات. أخبرنا قبل الحجز إن كنت تستخدم أدوية سيولة، أو لديك مرض مزمن، أو كنتِ حاملًا، ونوضح لك إن كانت الجلسة مناسبة.</p>
+      </details>
+      <details>
+        <summary>كم سعر الجلسة؟</summary>
+        <p>العروض والأسعار تتغير باستمرار، لذلك نخبرك بالسعر الحالي عند الاتصال أو في رسالة واتساب.</p>
+      </details>
+    </div>
+  </section>
 
-    <!-- معلومات الفرع -->
-    <section class="py-16 bg-white dark:bg-brand-darkBg">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 items-stretch">
-            <div class="bg-orange-50/60 dark:bg-brand-darkCard rounded-3xl p-7 md:p-9 border border-brand-primary/20 shadow-sm">
-                <span class="inline-block px-4 py-1 rounded-full bg-white dark:bg-brand-darkBg text-brand-hover dark:text-brand-primary font-semibold mb-4 text-sm border border-brand-primary/20">فرع إشبيلية</span>
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">أين نجدك؟</h2>
-                <ul class="space-y-5 text-gray-700 dark:text-gray-200">
-                    <li class="flex gap-3"><span class="text-2xl">📍</span><div><b class="block">العنوان</b>الرياض، حي إشبيلية<br>شارع الشيخ حسن بن حسين بن علي<br>بجوار مطعم أدار</div></li>
-                    <li class="flex gap-3"><span class="text-2xl">🕒</span><div><b class="block">ساعات العمل</b>قسم الرجال: على مدار الساعة<br>قسم النساء: من 2:00 ظهراً إلى 11:00 مساءً</div></li>
-                    <li class="flex gap-3"><span class="text-2xl">📞</span><div><b class="block">الهاتف</b><a href="tel:+966510633737" dir="ltr" class="font-bold">+966 51 063 3737</a></div></li>
-                </ul>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-7">
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=24.7842298,46.771108" target="_blank" rel="noopener noreferrer" class="btn text-center bg-brand-primary hover:bg-brand-hover text-white py-3 rounded-xl font-bold">📍 الاتجاهات</a>
-                    <a href="tel:+966510633737" class="btn text-center bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 py-3 rounded-xl font-bold">📞 اتصال</a>
-                    <a href="https://wa.me/966510633737" class="btn text-center bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold">💬 واتساب</a>
-                </div>
-            </div>
-
-            <div class="bg-white dark:bg-brand-darkCard rounded-3xl p-7 md:p-9 border border-gray-100 dark:border-gray-700 shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-5">قبل أن تزورنا</h2>
-                <ul class="space-y-4 text-gray-700 dark:text-gray-200">
-                    <li class="flex gap-3"><span class="text-brand-hover font-extrabold">1</span><span>اضغط «الاتجاهات» ليفتح موقعنا مباشرة على خرائط جوجل.</span></li>
-                    <li class="flex gap-3"><span class="text-brand-hover font-extrabold">2</span><span>احجز موعدك مسبقاً لتجنب الانتظار، ويؤكد لك الفريق الوقت على واتساب.</span></li>
-                    <li class="flex gap-3"><span class="text-brand-hover font-extrabold">3</span><span>للرجال قسم مستقل بممارسين رجال، وللنساء قسم مستقل بممارسات نساء.</span></li>
-                    <li class="flex gap-3"><span class="text-brand-hover font-extrabold">4</span><span>إن تعذّر عليك الوصول، اتصل بنا وسنرشدك للطريق.</span></li>
-                </ul>
-                <div class="mt-7 grid grid-cols-2 gap-3">
-                    <a href="booking-men.html" class="btn text-center bg-brand-primary hover:bg-brand-hover text-white py-3 rounded-xl font-bold">حجز الرجال</a>
-                    <a href="booking-women.html" class="btn text-center bg-brand-primary hover:bg-brand-hover text-white py-3 rounded-xl font-bold">حجز النساء</a>
-                </div>
-            </div>
+  <!-- الموقع -->
+  <section id="location" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">الموقع</span>
+        <h2>فرع حي إشبيلية — شرق الرياض</h2>
+      </div>
+      <div class="loc">
+        <div class="card">
+          <dl>
+            <dt>الفرع</dt><dd>نبض الطهر — حي إشبيلية، الرياض</dd>
+            <dt>ساعات العمل</dt><dd>يوميًا، ٦ ص – ١٢ م</dd>
+            <dt>الجوال والواتساب</dt><dd><a href="tel:+966510633737" data-conv="call" dir="ltr">0510633737</a></dd>
+          </dl>
+          <!-- استبدل الرابط برابط موقعك الدقيق من ملفك التجاري على خرائط جوجل -->
+          <a class="btn btn-primary" id="mapLink" data-conv="map" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=%D9%86%D8%A8%D8%B6%20%D8%A7%D9%84%D8%B7%D9%87%D8%B1%20%D9%84%D9%84%D8%AD%D8%AC%D8%A7%D9%85%D8%A9%20%D8%A5%D8%B4%D8%A8%D9%8A%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6">افتح الموقع على الخريطة</a>
         </div>
-    </section>
-
-    <!-- الخريطة -->
-    <section class="py-16 bg-brand-dark dark:bg-[#1F130A] text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-20"></div>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">موقعنا على الخريطة</h2>
-            <div class="map-wrapper">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.3277051392934!2d46.771108000000005!3d24.784229799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2eff007f66197d%3A0x564b4f6ab17b080b!2z2YXYsdmD2LIg2YbYqNi2INin2YTYt9mH2LEg2YTZhNit2KzYp9mF2Kk!5e0!3m2!1sen!2seg!4v1786902936877!5m2!1sen!2seg"
-                    title="موقع مركز نبض الطهر للحجامة في الرياض" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                <div class="map-info-card">
-                    <h3>📍 مركز نبض الطهر للحجامة</h3>
-                    <p>الرياض، حي إشبيلية<br>شارع الشيخ حسن بن حسين بن علي<br>بجوار مطعم أدار</p>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=24.7842298,46.771108" target="_blank" rel="noopener noreferrer" class="map-direction-button"><span>📍</span><span>انقر هنا لمعرفة الاتجاه</span></a>
-                </div>
-            </div>
+        <div class="card">
+          <h3>ماذا يقول عملاؤنا؟</h3>
+          <p>اطّلع على تقييمات عملائنا الحقيقية على خرائط جوجل قبل الحجز.</p>
+          <a class="btn btn-wa" style="background:#fff;border:1.5px solid var(--line);color:var(--ink)" data-conv="reviews" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=%D9%86%D8%A8%D8%B6%20%D8%A7%D9%84%D8%B7%D9%87%D8%B1%20%D9%84%D9%84%D8%AD%D8%AC%D8%A7%D9%85%D8%A9%20%D8%A5%D8%B4%D8%A8%D9%8A%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6">شاهد التقييمات على خرائط جوجل</a>
         </div>
-    </section>
-</section>
-
+      </div>
+    </div>
+  </section>
 </main>
 
+<footer>
+  <div class="wrap">
+    <p><b style="color:#fff">نبض الطهر للحجامة الطبية والطب البديل</b> — الرياض، المملكة العربية السعودية</p>
+    <p>المعلومات في هذه الصفحة للتوعية ولا تغني عن استشارة الطبيب المختص.</p>
+    <p><a href="https://nbdaltuhr.sa/">الموقع الرئيسي للمركز وجميع الفروع</a></p>
+  </div>
+</footer>
 
-    <footer class="bg-gray-950 text-white py-8 text-center border-t border-brand-dark/50">
-        <div class="flex flex-wrap justify-center gap-5 mb-3 text-sm text-gray-300">
-            <a href="index.html" class="hover:text-white">الرئيسية</a>
-            <a href="offers.html" class="hover:text-white">العروض</a>
-            <a href="booking-men.html" class="hover:text-white">حجز الرجال</a>
-            <a href="booking-women.html" class="hover:text-white">حجز النساء</a>
-        </div>
-        <p class="text-sm">&copy; 2026 مركز نبض الطهر للحجامة. جميع الحقوق محفوظة.</p>
-    </footer>
-
-    <!-- شريط سفلي للجوال -->
-    <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 grid grid-cols-3 gap-2 p-2 bg-white/95 dark:bg-gray-900/95 border-t border-gray-200 dark:border-gray-700">
-        <a href="tel:+966510633737" class="btn text-center py-3 rounded-xl border border-gray-200 dark:border-gray-700 font-bold text-sm">📞 اتصال</a>
-        <a href="https://wa.me/966510633737" class="btn text-center py-3 rounded-xl bg-green-600 text-white font-bold text-sm">💬 واتساب</a>
-        <a href="offers.html" class="btn text-center py-3 rounded-xl bg-brand-primary text-white font-bold text-sm">🎁 العروض</a>
-    </div>
-
+<!-- شريط الاتصال الثابت على الجوال -->
+<div class="dock">
+  <a class="btn btn-primary" href="tel:+966510633737" data-conv="call">اتصل الآن</a>
+  <a class="btn btn-wa" href="https://wa.me/966510633737" data-conv="whatsapp" rel="noopener">واتساب</a>
+</div>
 
 <script>
-const PAGE = 'home';
-renderSunnah('info');
+/* ============ تتبّع التحويلات (إعداد مرة واحدة) ============
+   1) في جوجل إعلانات: الأهداف ← التحويلات ← تحويل جديد ← موقع إلكتروني.
+   2) انسخ معرّف الحساب (يبدأ بـ AW-) وضعه في ADS_ID.
+   3) لكل تحويل (مكالمة، واتساب، حجز) انسخ "التصنيف" وضعه في LABELS.
+   حتى تملأهما، لا يُحمَّل أي كود تتبّع ولا يحدث أي شيء. */
+var ADS_ID = 'AW-XXXXXXXXXX';
+var LABELS = { call: '', whatsapp: '', form: '' };
 
-/* ---------- القائمة والوضع الداكن واللغة (مشترك بين الصفحات) ---------- */
-function toggleMenu() {
-    const m = document.getElementById('mobileMenu');
-    const open = m.classList.toggle('hidden') === false;
-    document.getElementById('menuBtn').setAttribute('aria-expanded', open);
-}
-function applyTheme(dark) {
-    document.documentElement.classList.toggle('dark', dark);
-    document.getElementById('sunIcon').classList.toggle('hidden', !dark);
-    document.getElementById('moonIcon').classList.toggle('hidden', dark);
-}
-function toggleTheme() {
-    const dark = !document.documentElement.classList.contains('dark');
-    applyTheme(dark);
-    try { localStorage.setItem('nt-theme', dark ? 'dark' : 'light'); } catch (e) {}
-}
-try { applyTheme(localStorage.getItem('nt-theme') === 'dark'); } catch (e) {}
+(function () {
+  var live = ADS_ID.indexOf('XXXX') === -1;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  if (live) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ADS_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', ADS_ID);
+  }
+  function conv(kind) {
+    if (!live || !LABELS[kind]) { return; }
+    gtag('event', 'conversion', { send_to: ADS_ID + '/' + LABELS[kind] });
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-conv]');
+    if (a) { conv(a.getAttribute('data-conv')); }
+  });
+  window.__conv = conv;
+})();
 
-const translations = {
-    ar: { logo: 'م. نبض الطهر', nav_home: 'الرئيسية', nav_offers: 'العروض', nav_men: 'حجز الرجال', nav_women: 'حجز النساء', nav_book: 'احجز الآن',
-          hero_welcome: '📍 فرع حي إشبيلية - الرياض', hero_title: 'مركز نبض الطهر للحجامة',
-          hero_desc: 'نستقبلك في حي إشبيلية، شارع الشيخ حسن بن حسين بن علي، بجوار مطعم أدار.',
-          cta_offers: '🎁 شاهد عرض السنة النبوية', cta_men: 'حجز الرجال', cta_women: 'حجز النساء' },
-    en: { logo: 'N. Al-Tuhr', nav_home: 'Home', nav_offers: 'Offers', nav_men: "Men's booking", nav_women: "Women's booking", nav_book: 'Book now',
-          hero_welcome: '📍 Ishbiliyah branch - Riyadh', hero_title: 'Nabd Al-Tuhr Cupping Center',
-          hero_desc: 'Find us in Ishbiliyah, Sheikh Hassan bin Hussein bin Ali Street, next to Adar restaurant.',
-          cta_offers: '🎁 See the Prophetic Sunnah offer', cta_men: "Men's booking", cta_women: "Women's booking" }
-};
-let currentLang = 'ar';
-function toggleLanguage() {
-    currentLang = currentLang === 'ar' ? 'en' : 'ar';
-    document.documentElement.lang = currentLang;
-    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-    document.getElementById('langToggleBtn').innerText = currentLang === 'ar' ? 'EN' : 'عربي';
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const v = translations[currentLang][el.getAttribute('data-i18n')];
-        if (v) el.innerText = v;
-    });
-}
+/* ============ حالة الفتح بتوقيت الرياض ============ */
+(function () {
+  var el = document.getElementById('status'), tx = document.getElementById('statusText');
+  if (!el || !tx) { return; }
+  try {
+    var h = parseInt(new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Riyadh', hour: 'numeric', hour12: false }).format(new Date()), 10) % 24;
+    if (h >= 6) { el.classList.add('open'); tx.textContent = 'مفتوح الآن — نستقبلكم حتى ١٢ منتصف الليل'; }
+    else { tx.textContent = 'مغلق الآن — نفتح الساعة ٦ صباحًا'; }
+  } catch (e) {}
+})();
 
-
-/* ---------- أيام الحجامة المستحبة (17 و19 و21 هجرياً) تُحسب تلقائياً من تقويم أم القرى ---------- */
-function sunnahDays(count) {
-    try {
-        const R = { timeZone: 'Asia/Riyadh' };
-        const hf = new Intl.DateTimeFormat('en-u-ca-islamic-umalqura-nu-latn', { ...R, day: 'numeric' });
-        const hm = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura-nu-latn', { ...R, month: 'long' });
-        const wd = new Intl.DateTimeFormat('ar-SA', { ...R, weekday: 'long' });
-        const gf = new Intl.DateTimeFormat('en-CA', { ...R, year: 'numeric', month: '2-digit', day: '2-digit' });
-        const gm = new Intl.DateTimeFormat('ar-SA-u-ca-gregory-nu-latn', { ...R, day: 'numeric', month: 'long' });
-        const out = [], t0 = Date.now();
-        for (let i = 0; i < 75 && out.length < (count || 3); i++) {
-            const x = new Date(t0 + i * 864e5), d = +hf.format(x);
-            if (d === 17 || d === 19 || d === 21) out.push({ iso: gf.format(x), hd: d, hm: hm.format(x), wd: wd.format(x), g: gm.format(x), today: i === 0 });
-        }
-        return out;
-    } catch (e) { return []; }
-}
-
-function renderSunnah(mode) {
-    const box = document.getElementById('sunnahBox');
-    if (!box) return;
-    const days = sunnahDays(3);
-    if (!days.length) { box.remove(); return; }
-    const cards = days.map(d => {
-        const head = `<div class="flex items-center justify-between gap-2"><span class="font-extrabold text-lg text-gray-900 dark:text-white">${d.wd}</span>${d.today ? '<span class="bg-green-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">اليوم</span>' : ''}</div>
-            <div class="text-brand-hover font-extrabold text-xl mt-1">${d.hd} ${d.hm}</div>
-            <div class="text-sm text-gray-500 dark:text-gray-300">${d.g}</div>`;
-        if (mode === 'pick') {
-            return `<button type="button" data-sday="${d.iso}" onclick="pickDay('${d.iso}')" class="sd text-start rounded-2xl border-2 border-orange-200 dark:border-gray-700 bg-white dark:bg-brand-darkCard p-4 transition">${head}<div class="text-xs font-bold text-brand-hover mt-2">اضغط لاختيار هذا اليوم</div></button>`;
-        }
-        return `<div class="rounded-2xl border-2 border-orange-200 dark:border-gray-700 bg-white dark:bg-brand-darkCard p-4">${head}
-            <div class="grid grid-cols-2 gap-2 mt-3">
-                <a href="booking-men.html?d=${d.iso}" class="btn text-center bg-brand-primary hover:bg-brand-hover text-white py-2 rounded-xl font-bold text-sm">رجال</a>
-                <a href="booking-women.html?d=${d.iso}" class="btn text-center bg-brand-hover hover:bg-orange-700 text-white py-2 rounded-xl font-bold text-sm">نساء</a>
-            </div></div>`;
-    }).join('');
-    box.innerHTML = `<div class="max-w-5xl mx-auto px-4 py-8">
-        <div class="text-center mb-5">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white">🌙 أيام الحجامة المستحبة القادمة</h2>
-            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">الأيام 17 و19 و21 من الشهر الهجري، لمن يفضّل الهدي النبوي في التوقيت. هي اختيار ديني وليست شرطاً طبياً، ويمكنك الحجز في أي يوم.</p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">${cards}</div>
-        <p class="text-xs text-center text-gray-500 dark:text-gray-400 mt-3">التواريخ حسب تقويم أم القرى، وقد تختلف يوماً واحداً بحسب رؤية الهلال.</p>
-    </div>`;
-}
-
-/* تلوين الرابط الحالي في القائمة + إظهار #اسم-الصفحة في شريط العنوان */
-document.querySelectorAll('[data-nav]').forEach(a => a.classList.toggle('active', a.dataset.nav === PAGE));
-/* داخل معاينة Claude يرفض المتصفح هذا السطر، لذلك وضعناه داخل try حتى لا يوقف الصفحة. على موقعك الحقيقي يعمل ويظهر # في الرابط */
-try { history.replaceState(null, '', '#' + PAGE); } catch (e) {}
+/* ============ نموذج الحجز ← رسالة واتساب جاهزة ============ */
+(function () {
+  var f = document.getElementById('bookForm'), msg = document.getElementById('formMsg');
+  if (!f) { return; }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = f.name.value.trim(), phone = f.phone.value.replace(/\s+/g, '');
+    if (name.length < 2) { msg.textContent = 'من فضلك اكتب اسمك.'; f.name.focus(); return; }
+    if (!/^(\+?966|0)?5\d{8}$/.test(phone)) { msg.textContent = 'تأكد من رقم الجوال (مثال: 05xxxxxxxx).'; f.phone.focus(); return; }
+    msg.textContent = '';
+    var sec = f.querySelector('input[name=sec]:checked').value;
+    var text = 'السلام عليكم، أرغب بحجز موعد حجامة في فرع إشبيلية.\n' +
+               'الاسم: ' + name + '\nالجوال: ' + phone + '\nالقسم: ' + sec + '\nالوقت المفضل: ' + f.when.value;
+    if (window.__conv) { window.__conv('form'); }
+    window.location.href = 'https://wa.me/966510633737?text=' + encodeURIComponent(text);
+  });
+})();
 </script>
 </body>
 </html>
